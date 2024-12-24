@@ -1,0 +1,123 @@
+	<style>		body {
+
+			background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3be1dae-3caa-4d45-be6c-3de586ba95e2/dejrji3-f0dfbf31-958c-4701-9e10-fcea6d2ff693.jpg/v1/fill/w_1192,h_670,q_70,strp/purple_midnight_by_bisbiswas_dejrji3-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2IzYmUxZGFlLTNjYWEtNGQ0NS1iZTZjLTNkZTU4NmJhOTVlMlwvZGVqcmppMy1mMGRmYmYzMS05NThjLTQ3MDEtOWUxMC1mY2VhNmQyZmY2OTMuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.f4LKY-NudHhtj8GSn-R9XSyK5fshhE3LEeGeVYDAjpc) no-repeat fixed;
+
+			background-size: 100%;
+
+		}
+
+	</style>
+
+<title>{{member.user.username}}</title>
+
+  <div class="twPc-div bg-dark">
+
+    <a class="twPc-bg twPc-block"></a>
+
+    <div>
+
+      <div class="twPc-button">
+
+        <a href="https://discordapp.com/users/{{member.user.id}}" class="btn btn-primary btn-sm">Discord Linki</a>  
+
+      </div>
+
+      <a href="https://discordapp.com/users/{{member.user.id}}" class="twPc-avatarLink">
+
+        <img alt="Avatar" src="{{avatarURL}}" class="twPc-avatarImg">
+
+      </a>
+
+      <div class="twPc-divUser">
+
+        <div class="twPc-divName">
+
+          {{member.user.username}}
+
+          
+
+        </div>
+
+        <span> 
+
+         {{#if perms.owner}}
+
+                        <span><img src="https://i.ibb.co/Thqb9KJ/R-removebg-preview.png" alt="Site Yetkilisi" width="50" height="30">Site Sahibi</span>
+
+                    {{else}}
+
+                        {{#if perms.admin}}
+
+                            <span><img src="https://i.ibb.co/4tQbz1N/9111-shinyblueearlydev-1-removebg-preview.png" alt="Site Admini" width="30" height="30">Site Admini</span>
+
+                        {{else}}
+
+                            {{#if perms.yetkili}}
+
+                                <span><img src="https://i.ibb.co/bLzVZVX/OIP-5-removebg-preview.png" alt="Kod Paylaşım Yetkilisi" width="30" height="30">Kod Paylaşım Yetkilisi</span>
+
+                            {{else}}
+
+                                <span><img src="https://i.ibb.co/PzhvDnt/pet.gif" alt="Sunucu Üyesi" width="30" height="30">ÜYE</span>
+
+                            {{/if}}
+
+                        {{/if}}
+
+                    {{/if}}
+
+                </span>
+
+                {{#if stats}}
+
+                    <span> |  Paylaşılan {{stats.paylasilan}} - Silinen {{stats.silinen}} </span>
+
+                {{/if}}
+
+            </div>
+
+            <div class="twPc-divStats">
+
+                <h3>Görebildiği Kodlar</h3>
+
+                <ul class="twPc-Arrange">
+
+                    <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/script">Roblox Script</a></span></li>
+
+                    <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/topluluk">Topluluk</a></span></li>
+
+                    {{#if perms.owner}}
+
+                        <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Özel Kodlar</a></span></li>
+
+                    {{else}}
+
+                        {{#if perms.admin}}
+
+                            <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Özel Kodlar</a></span></li>
+
+                        {{else}}
+
+                            {{#if perms.yetkili}}{{/if}}
+
+                                <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Özel Kodlar</a></span></li>
+
+                            {{#if perms.elmas}}{{/if}}
+
+                            {{#if perms.hazir}}{{/if}}
+
+                        {{/if}}
+
+                    {{/if}}
+
+                </ul>
+
+	<!-- KAR--> <script type="text/javascript" src="https://webkodu.ozgurlukicin.com/kod-kaynak/wk-kar-efekt.js"></script> <!-- KAR-->
+
+       </div>
+
+     </div>
+
+   </div>
+
+ </div>

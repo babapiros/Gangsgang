@@ -1,0 +1,61 @@
+<style>
+.avatar {
+  border-radius: 5% !important;  
+  border: 2px solid white;
+  padding: 1px;
+}
+#avatar2 {
+    width: 5px;
+    height: 5px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    text-align:center;
+}
+    #avatar2:hover {g
+        transform: translate(0px,-20px);
+        -webkit-transform: translate(0px,-20px);
+	}
+  </style>	
+<style>
+		body {
+			background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3be1dae-3caa-4d45-be6c-3de586ba95e2/dejrji3-f0dfbf31-958c-4701-9e10-fcea6d2ff693.jpg/v1/fill/w_1192,h_670,q_70,strp/purple_midnight_by_bisbiswas_dejrji3-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2IzYmUxZGFlLTNjYWEtNGQ0NS1iZTZjLTNkZTU4NmJhOTVlMlwvZGVqcmppMy1mMGRmYmYzMS05NThjLTQ3MDEtOWUxMC1mY2VhNmQyZmY2OTMuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.f4LKY-NudHhtj8GSn-R9XSyK5fshhE3LEeGeVYDAjpc) no-repeat fixed;
+			background-size: 100%;
+		}
+	</style>
+
+
+<title>Keon | {{kod.isim}}</title>
+<main>
+  <br><br><br>
+
+<div id="sunucusresmi">
+   <hr><b><center><img alt="Avatar" src="{{kod.icon}}" class="avatar"> <h3 class="text-center text-light font-weight-bolder" style="margin: 1rem;">{{kod.k_adi}}</h3></center></b> <hr>
+</div>
+  <center>
+  <br>
+  <h3 class="text-center text-light font-weight-bolder" style="margin: 1rem;">Kod İsmi: {{kod.isim}} {{member.user.id}} </h3>
+    <h3 class="text-center text-light font-weight-bolder" style="margin: 1rem;">Kodu: {{kod.auth}} {{member.user.id}} </h3>
+
+  <h5 class="text-center text-light font-weight-light">Kod Açıklaması: {{kod.desc}}</h5>
+  <hr>
+  
+  <h7 class="text-center text-light font-weight-light">Gerekli Moduller: <kbd>{{kod.modules}}</kbd></h5>
+  <hr>
+  </center>
+  <center><p class="h5">1.Kod</p></center>
+  <pre class="kodyazirengi">
+    <code>{{kod.main_code}}</code>
+  </pre>
+ // <button type="button" class="fa fa-copy"  id="copy_main">Kodu kopyala</button>
+
+  <code id="code_main" hidden>{{kod.main_code}} </code>
+  <center><p class="h5">2.Kod</p></center>
+  <pre class="kodyazirengi">
+    <code>{{kod.komutlar_code}}</code>
+  </pre>
+<code id="code_komutlar" hidden>{{kod.komutlar_code}}</code>
+//  <button type="button" class="fa fa-copy"  id="copy_komutlar">Komutlar Kodunu Kopyala</button>
+<center><a href="/sil/{{kod.kod_rank}}/{{kod.id}}" class="btn btn-outline-danger btn-lg btn-block" style="margin: 1rem;">Kodu Kaldır</a></center>
+</main>
+<!-- KAR--> <script type="text/javascript" src="https://webkodu.ozgurlukicin.com/kod-kaynak/wk-kar-efekt.js"></script> <!-- KAR-->
+
