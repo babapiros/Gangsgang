@@ -1,0 +1,146 @@
+[
+    {
+        "kodlar": {
+            "BDFD GELİŞMİŞ İSİM DEĞİŞTİRMELİ AFK SİSTEMİ": {
+                "isim": "BDFD GELİŞMİŞ İSİM DEĞİŞTİRMELİ AFK SİSTEMİ",
+                "id": "NXXgENm18u0kF4xYuh1i",
+                "desc": "AFK GEÇTİĞİNİZDE HEM İSİM DEĞİŞİR HEM İSMİNİZİN YANINA ÖZEL TAG OLUŞTURUR (AFK) DİYE SİZ GELENE KADAR SİZE ATILAN MESAJLARI SİLER VE DAHA BAYA ÖZELLİK ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "BÜTÜN KODLARIN ŞİFRESİ :\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n 2504",
+                "komutlar_code": "Afk Sistemi Variableri\r\n     https://controlc.com/1f473dae\r\n\r\n\r\nAfk Sistemi Tetikleyici\r\n         https://controlc.com/02dc6b52\r\n\r\n\r\nA dan Z Ye Yapıştıracağınız Komutlar\r\n        https://controlc.com/17c37923\r\n\r\n\r\nAfk Komutu\r\n    https://controlc.com/5311a68e ",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/5/2023"
+            },
+            "BDFD RESİMLİ GİRİŞ ÇIKIŞ": {
+                "isim": "BDFD RESİMLİ GİRİŞ ÇIKIŞ",
+                "id": "Klj94SQ8EpLFM8i7SdeM",
+                "desc": "SUNUCUYA GELENLERE RESİMLİ BİR ŞEKİLDE HOŞGELDİN DER",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "**Viriable**\r\n\r\ngiriş =`",
+                "komutlar_code": "**giriş-çıkış-ayarla**\r\n```\r\n$nomention\r\n$argsCheck[>1;Kanal Etiketle]\r\n$setServerVar[giriş;$mentionedChannels[1]]\r\n> Kanal başarıyla Ayarlandı \r\n> <#$mentionedChannels[1]>\r\n\r\n```\r\n\r\n**$onJoined[$getServerVar[giriş]]**\r\n```\r\n$nomention\r\n$title[Welcome]\r\n$description[> ✋ Sunucumuza Hoşgeldin $username\r\n> Seninle Birlikte $membersCount Kişiyiz.\r\n]\r\n$thumbnail[$authorAvatar]\r\n$image[https://api.popcat.xyz/welcomecard?background=LinkiBurayaYapıştır&text1=$username%20$discriminator[$authorID]&text2=Sunucumuza+Hosgeldiniz&text3=Uye+$membersCount&avatar=$authorAvatar]\r\n```\r\n\r\n**$onLeave[$getServerVar[giriş]]**\r\n```\r\n$nomention\r\n$image[https://api.popcat.xyz/welcomecard?background=LinkiBurayaYapıştır&text1=$username%20$discriminator[$authorID]&text2=Sunucudan+Ayrildi&text3=Uye+$membersCount&avatar=$authorAvatar]\r\n```",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/5/2023"
+            },
+            "BDFD OTO MESAJ": {
+                "isim": "BDFD OTO MESAJ",
+                "id": "Z2d0dpV27iYsNzGrzway",
+                "desc": "ÖZEL OTO MESAJ AYARLARSINIZ SONRA O MESAJI YAZDIĞINIZDA AYARLADĞINIZ MESAJI ATAR",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok ",
+                "komutlar_code": "$deletecommand\r\n$var[channel;BURAYA MESAJIN GONDERILECEGİ KANAL ID YAZ]\r\n$var[message;GONDERILECEK MESAJI BURAYA YAZ]\r\n\r\n$async[1]\r\n$channelSendMessage[$channelID;OTO MESAJ AYARLANDI]\r\n\r\n$await[1]\r\n$endasync\r\n$c[⬇️ AŞAGIDAKİ KODU KOPYALAYIP ÇOGALTARAK GONDERECEGİ BIR SONRAKİ ZAMANI BELİRTİN ⬇️]\r\n$async[$optOff[$random[1;10000]]]\r\n$replyIn[1m] $c[<== YAN TARAFTAKI REPLYIN KISMINA GONDERILECEK ZAMANI YAZ]\r\n$channelSendMessage[$var[channel];$var[message]]\r\n$await[$random[1;10000]]\r\n$endasync\"\r\n",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/5/2023"
+            },
+            "BDFD KAYITLI HOŞGELDİN BAYBAY SİTREMİ": {
+                "isim": "BDFD KAYITLI HOŞGELDİN BAYBAY SİTREMİ",
+                "id": "zVyYTVMFVaqZt8XKUXoN",
+                "desc": "BİRİ SUNUCUYA KATILINCA BELİRLENEN KANALA HEÖ HOŞGELDİN HEMDE ERKEK KIZ KAYIT OLMAK İÇİN BUTONLU MENÜ ATAR.",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Variable\r\nhgkanal = Ayarlanmamış\r\nerol = Ayarlanmamış\r\nkrol = Ayarlanmamış\r\n",
+                "komutlar_code": "{prefix}hgkanal-ayarla\r\n```js\r\n$nomention\r\n$onlyAdmin[**❌ | Bu Komutu Sadece __Yöneticiler__ Kullanabilir!**]\r\n$onlyIf[$mentionedChannels[1]!=;**❌ | Bir Kanal Ayarla!**]\r\n$author[Başarılı]\r\n$description[\r\n> **👥 | Başarıyla HG-BB Kanalı <#$mentionedChannels[1]> Olarak Ayarlandı!**]\r\n$color[$random[000000;999999]]\r\n$addTimestamp\r\n$authorIcon[$authorAvatar]\r\n$footer[$username#$discriminator[]]\r\n$footerIcon[$userAvatar[$botID]]\r\n$thumbnail[$serverIcon]\r\n$setServerVar[hgkanal;$mentionedChannels[1];$guildID]```\r\n\r\n{prefix}rol-ayarla\r\n```js\r\n$nomention\r\n$onlyAdmin[**❌ | Bu Komutu Sadece __Yöneticiler__ Kullanabilir!**]\r\n$onlyIf[$message[1]!=;**❌ | Hatalı Kullanım! +rol-ayarla Erkek/Kız @Rol**]\r\n$if[$message[1]==Erkek]\r\n$onlyIf[$mentionedRoles[1]!=;**❌ | Hatalı Kullanım! +rol-ayarla Erkek @Rol**]\r\n$author[Başarılı]\r\n$description[\r\n**♂️ | Başarıyla Erkek Rolü <@&$mentionedRoles[1]> Olarak Ayarlandı!**]\r\n$color[22ff00]\r\n$addTimestamp\r\n$authorIcon[$authorAvatar]\r\n$footer[$username#$discriminator[]]\r\n$setServerVar[erol;$mentionedRoles[1];$guildID]\r\n$endif\r\n$if[$message[1]==Kız]\r\n$onlyIf[$mentionedRoles[1]!=;**❌ | Hatalı Kullanım! +rol-ayarla Kız @Rol**]\r\n$author[Başarılı]\r\n$description[\r\n**♂️ | Başarıyla Kız Rolü <@&$mentionedRoles[1]> Olarak Ayarlandı!**]\r\n$color[22ff00]\r\n$addTimestamp\r\n$authorIcon[$authorAvatar]\r\n$footer[$username#$discriminator[]]\r\n$setServerVar[krol;$mentionedRoles[1];$guildID]\r\n$endif```\r\n\r\n$onInteraction[kız]\r\n```js\r\n$nomention\r\n$author[Kayıt Başarılı]\r\n$description[\r\n*Kayıtınız Başarıyla Gerçekleştirildi*\r\n\r\n> **Verilen Rol:** <@&$getServerVar[krol]>\r\n\r\n> **Kullanıcı:** <@$authorID>]\r\n$roleGrant[$authorID;+$getServerVar[krol]]\r\n$removeButtons\r\n$color[$random[000000;999999]]\r\n$addTimestamp\r\n$authorIcon[$authorAvatar]\r\n$footer[$username]\r\n$footerIcon[$userAvatar[$botID]]\r\n$thumbnail[$serverIcon]```\r\n\r\n$onInteraction[erkek]\r\n```js\r\n$nomention\r\n$author[Kayıt Başarılı]\r\n$description[\r\n*Kayıtınız Başarıyla Gerçekleştirildi*\r\n\r\n> **Verilen Rol:** <@&$getServerVar[erol]>\r\n\r\n> **Kullanıcı:** <@$authorID>]\r\n$roleGrant[$authorID;+$getServerVar[erol]]\r\n$removeButtons\r\n$color[$random[000000;999999]]\r\n$addTimestamp\r\n$authorIcon[$authorAvatar]\r\n$footer[$username]\r\n$footerIcon[$userAvatar[$botID]]\r\n$thumbnail[$serverIcon]```\r\n\r\n$onJoined[$getServerVar[hgkanal]]\r\n```js\r\n$nomention\r\n$author[Bir Kullanıcı Katıldı!]\r\n$description[\r\n> `$serverName[$guildID]` Adlı Sunucuya Hoşgeldin, $username ! Seninle Birlikte Toplam Olarak `$sum[$membersCount;1]` Kişi Olduk! Lütfen Aşağıdaki Butonlara Basarak Cinsiyetini Seç!]\r\n$addButton[no;erkek;♂️ Erkek;primary;no;]\r\n$addButton[no;kız;♀️ Kız;success;no;]\r\n$color[ffffff]\r\n$addTimestamp\r\n$footer[Hoşgeldin, $username]\r\n$authorIcon[$authorAvatar]```",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/5/2023"
+            },
+            "BDFD CF ALL KOMUTU": {
+                "isim": "BDFD CF ALL KOMUTU",
+                "id": "XMTYvNMQhhqbi7Htgyxa",
+                "desc": "OWO BOTTAKİ GİBİ CF ALL KOMUTU CF ALL YAZINCA BÜTÜN PARAYI YATIRIR SLOT KOMUTU DA GELİCEK YAKINDA ",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "**Gerekli Değişkenler**\r\n```js\r\npara = 0\r\nemoji_no = ❌```\r\n\r\nİki Tane Komut Var Birisi Cf Diğeri Cf all Ona Göre Yaoın",
+                "komutlar_code": "(prefix)cf\r\n```js\r\n$nomention\r\n$suppressErrors\r\n$onlyIf[$message[1]<150001;<@$authorID> En Fazla `150.000` Yatırabilirsin.]\r\n$onlyIf[$isNumber[$message[1]]!=false;<@$authorID> Bir Rakam Yazmalısın.]\r\n$onlyIf[$message[1]>0;$getVar[emoji_no] Arkadaş 0 Altı Yazınca Botu Hacklemiş Olmuyorsun]\r\n$onlyIf[$message<=$getVar[para;$authorID];<@$authorID> Üzerinde `$numberSeparator[$message[1];.]` Kadar Para Yok !]\r\n$argsCheck[>1;<@$authorID> Bir Miktar Yazmalısın.]\r\n$if[$replaceText[$replaceText[$randomText[1;2];1;1;100];2;2;150]==1]\r\n<@$authorID> `$numberSeparator[$message[1];.]` yatırdı, para dönüyor...\r\n$editIn[4s;<@$authorID> `$numberSeparator[$message[1];.]` yatırdı, para dönüyor... ve kazandın `$numberSeparator[$sum[$message;$message];.]`!!]\r\n$setVar[para;$sum[$getVar[para;$authorID];$message[1]];$authorID]\r\n$else\r\n<@$authorID> `$numberSeparator[$message[1];.]` yatırdı, para dönüyor...\r\n$editIn[4s; <@$authorID> `$numberSeparator[$message[1];.]` yatırdı, para dönüyor... ve kaybettin :c]\r\n$setVar[para;$sub[$getVar[para;$authorID];$message[1]];$authorID]\r\n$endif\r\n$changeCooldownTime[gün;saat;dakika;saniye]\r\n$globalCooldown[15s;⏰ Tekrardan  Kullanmak İçin **%time-s%** Beklemen Gerekiyor.]\r\n$endif```\r\n\r\n(prefix)cf all\r\n```js\r\n$nomention \r\n$if[$getVar[para;$authorID]<150000]\r\n$onlyIf[$getVar[para;$authorID]>0;Paran Yok Knk]\r\n$if[$replaceText[$replaceText[$randomText[1;2];1;1;100];2;2;150]==1]\r\n<@$authorID> `$numberSeparator[$getVar[para;$authorID];.]` yatırdı, para dönüyor... \r\n$editIn[4s;<@$authorID> `$numberSeparator[$getVar[para;$authorID];.]` yatırdı, para dönüyor... ve kazandın `$numberSeparator[$sum[$getVar[para;$authorID];$getVar[para;$authorID]];.]`!!]\r\n$setVar[para;$sum[$getVar[para;$authorID];$getVar[para;$authorID]];$authorID]\r\n$else\r\n<@$authorID> `$numberSeparator[$getVar[para;$authorID];.]` yatırdı, para dönüyor... \r\n$editIn[4s;<@$authorID> `$numberSeparator[$getVar[para;$authorID];.]` yatırdı, para dönüyor... ve kaybettin :c]\r\n$setVar[para;$sub[$getVar[para;$authorID];$getVar[para;$authorID]];$authorID]\r\n$endif\r\n$changeCooldownTime[gün;saat;dakika;saniye]\r\n$globalCooldown[3s;:alarm_clock: <@$authorID> bu komutu kullanmak için __%time-s%__ beklemelisin.]\r\n$endif\r\n\r\n$if[$getVar[para;$authorID]>150000]\r\n$onlyIf[$getVar[para;$authorID]>0;Paran Yok Knk]\r\n$if[$replaceText[$replaceText[$randomText[1;2];1;1;100];2;2;150]==1]\r\n<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... \r\n$editIn[4s;<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... ve kazandın `$numberSeparator[$sum[150000;150000];.]`!!]\r\n$setVar[para;$sum[$getVar[para;$authorID];150000];$authorID]\r\n$else\r\n<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... \r\n$editIn[4s;<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... ve kaybettin :c]\r\n$setVar[para;$sub[$getVar[para;$authorID];150000];$authorID]\r\n$endif\r\n$changeCooldownTime[gün;saat;dakika;saniye]\r\n$globalCooldown[3s;:alarm_clock: <@$authorID> bu komutu kullanmak için __%time-s%__ beklemelisin.]\r\n$endif\r\n\r\n$if[$getVar[para;$authorID]==150000]\r\n$onlyIf[$getVar[para;$authorID]>0;Paran Yok Knk]\r\n$if[$replaceText[$replaceText[$randomText[1;2];1;1;100];2;2;150]==1]\r\n<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... \r\n$editIn[4s;<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... ve kazandın `$numberSeparator[$sum[150000;150000];.]`!!]\r\n$setVar[para;$sum[$getVar[para;$authorID];150000];$authorID]\r\n$else\r\n<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... \r\n$editIn[4s;<@$authorID> `$numberSeparator[150000;.]` yatırdı, para dönüyor... ve kaybettin :c]\r\n$setVar[para;$sub[$getVar[para;$authorID];150000];$authorID]\r\n$endif\r\n$changeCooldownTime[gün;saat;dakika;saniye]\r\n$globalCooldown[3s;:alarm_clock: <@$authorID> bu komutu kullanmak için __%time-s%__ beklemelisin.]\r\n$endif\r\n$onlyIf[$getVar[karalist;$authorID]!=evet;$getVar[emoji_no] <@$authorID> **$getVar[karalistsebep;$authorID]** Sebebiyle Kara Listeye Alındığın İçin Komutlarımı Kullanamazsın!] \r\n```",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/6/2023"
+            },
+            "BDFD NİTRO GENARATÖR ": {
+                "isim": "BDFD NİTRO GENARATÖR ",
+                "id": "wnekYitqhn9oXUVoLyw1",
+                "desc": "ŞANSLIYSANIZ BELKİ  NİTRO SAHİBİ OLABİLİRSİNİZ 😆",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Not: Bu direk gelmez biraz 100-150 kez atınca gelir şanslıysanız tabi erkenden ",
+                "komutlar_code": "\r\n$nomention\r\nhttps://discord.gift/$randomString[10]$randomString[6]\r\n",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/6/2023"
+            },
+            "BDFD MODAL KOMUTUNU SADECE YAZNA KİŞİ KULLANMA": {
+                "isim": "BDFD MODAL KOMUTUNU SADECE YAZNA KİŞİ KULLANMA",
+                "id": "g1HV7F8iusVSy7Ev2LQU",
+                "desc": "HERHANGİ BİR MODAL KOMUTUNDA MENÜLERİ YADA BUTONLARI SADECE YAZAN KİŞİ KULLANMASINI SAĞLAR ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "$onInteraction[kategori]\r\n$nomention\r\n$textSplit[$message;/]\r\n$if[$textSplit[$message;/]$splitText[2]!=$authorID$textSplit[$message;/]]\r\n$removeComponent[kategori]\r\n$author[$username#$discriminator[$authorID]]\r\n$authorIcon[$authorAvatar]\r\n$color[FFFFFF]\r\n$description[\r\n$ephemeral Bu Menüyü Yazan Kişi Kullanabilir]\r\n$addTimestamp\r\n$elseif[$textSplit[$message;/]$splitText[1]==ekonomi$textSplit[$message;/]]\r\n$nomention\r\n$color[$random[0;99999]]\r\n$title[$username İşte Yardım Menüm]\r\n$description[\r\n\r\nEkonomi Komutlarınız]\r\n\r\n$footer[Komutu $username#$discriminator[$authorID] Kullandı.]\r\n$footerIcon[$authorAvatar]\r\n$addTimestamp\r\n$endif\r\n$textSplit[$message;/]\r\n$if[$textSplit[$message;/]$splitText[2]!=$authorID$textSplit[$message;/]]\r\n$removeComponent[kategori]\r\n$author[$username#$discriminator[$authorID]]\r\n$authorIcon[$authorAvatar]\r\n$color[FFFFFF]\r\n$description[\r\n$ephemeral Bu Menüyü Yazan Kişi Kullanabilir]\r\n$addTimestamp\r\n$elseif[$textSplit[$message;/]$splitText[1]==yetkili$textSplit[$message;/]]\r\n$nomention\r\n$color[$random[0;99999]]\r\n$title[$username İşte Yardım Menüm]\r\n$description[\r\n\r\nModerasyon Komutlarınız]\r\n\r\n$footer[Komutu $username#$discriminator[$authorID] Kullandı.]\r\n$footerIcon[$authorAvatar]\r\n$addTimestamp\r\n$endif\r\n```\r\n",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "BDFD ROL RENGİ DEĞİŞTİRME ": {
+                "isim": "BDFD ROL RENGİ DEĞİŞTİRME ",
+                "id": "GQex5d1Jkw2Q88CpYhKn",
+                "desc": "YAZDIĞINIZ ROLÜ İSTEDİĞİNİZ RENGE UĞRAŞMADAN SADECE BİR KOD İLE DEĞİŞTİRİN",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "(prefix)rol-renk-değiştir\r\n$nomention\r\n$suppressErrors[Yetkim Yetmiyor]\r\n$onlyBotPerms[admin;Yetkim Yetmiyor]\r\n$onlyPerms[admin;Bunu Kullanabilmek İçin Yönetici Olmalısın]\r\n$onlyIf[$mentionedRoles[1]!=;Rol Etiketle]\r\n$onlyIf[$message[2]!=;Bir Rol Rengi Yaz]\r\n$colorRole[$message[2]]\r\n$username#$discriminator[$authorID] Tarafından Rol Rengi Değiştirildi.\r\nRol: <@&$mentionedRoles[1]>",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "BDFD ALTBAŞLIK ÖNERİ ": {
+                "isim": "BDFD ALTBAŞLIK ÖNERİ ",
+                "id": "cMozmlvn6ecKnz2F3AHz",
+                "desc": "EN GELİŞMİŞ ALTBAŞLIK ÖNERİ KOMUTU / BDFD",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "ayarla\r\n```\r\n$nomention\r\n$deletecommand\r\n$if[$and[$isAdmin[$authorID]==true;$mentionedChannels[1]==]==true]\r\n$description[🔴 | **hata**, *hiçbir kanaldan bahsedilmedi.*]\r\n$color[2F3136]\r\n$elseif[$and[$isAdmin[$authorID]==true;$mentionedChannels[1]!=]==true]\r\n$description[*🟢 | öneriler şurada yayınlanacak  <#$mentionedChannels[1]> !*]\r\n$color[2F3136]\r\n$setServerVar[suggchannel;$mentionedChannels[1]]\r\n$endif\r\n$if[$isAdmin[$authorID]==false]\r\n$color[2F3136]\r\n$ephemeral\r\n$description[🔴 | **Hata**, *yönetici izinleriniz yok !*]\r\n$endif\r\n```\r\n---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n**$onInteraction**\r\n\r\n```\r\n$onlyIf[$checkContains[$customID;ansed]==true;]\r\n$textSplit[$customID;@]\r\n \r\n$editMessage[$channelID;$splitText[2];;$getEmbedData[$channelID;$splitText[2];1;title];$getEmbedData[$channelID;$splitText[2];1;description]\r\n \r\n**$username tarafından yanıtlandı**\r\n$input[ans];ff8888;]\r\n$editButton[answer;Answered;primary;yes;;$splitText[2]]\r\n```\r\n\r\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n**suggest**\r\n```\r\n$nomention\r\n$sendMessage[:green_circle: | **suggest**, *istekler başarıyla gönderildiistekler başarıyla gönderildi!*]\r\n \r\n$if[$getServerVar[suggchannel]!=]\r\n \r\n$useChannel[$getServerVar[suggchannel]]\r\n$color[00ff00]\r\n$title[$username'den öneri]\r\n$description[\r\n**Öneri:**\r\n`ms\r\n$message[1;msg]\r\n\r\n**Tepki:**\r\n:green_circle: Evet\r\n:orange_circle: neden\r\n:red_circle: Hayır]\r\n$addReactions[:yellow_circle:;:orange_circle:;:red_circle:]\r\n$addButton[yes;answer;Answer;primary;no;;]\r\n$addButton[no;thread;Create Thread;secondary;no;;]\r\n$else\r\n$ephemeral\r\n$description[:red_circle: | **Hata**, *sunucuda tanımlanmış öneri kanalı yoksunucuda tanımlanmış öneri kanalı yok*]\r\n$color[00ff00]\r\n$endif\r\n```\r\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n$onInteraction[theard]\r\n```\r\n$nomention\r\n$title[$getEmbedData[$channelID;$messageID;1;title]]\r\n$description[$getEmbedData[$channelID;$messageID;1;description]]\r\n$var[id;$startThread[Öneri Yorumlar;$channelID;$messageID;10080;yes]]\r\n$removeComponent[$customID]\r\n```\r\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n**$onInteraction[answer]**\r\n\r\n\r\n```\r\n$nomention\r\n \r\n$if[$isAdmin[$authorID]]\r\n$newModal[ansed@$messageID;Title]\r\n$addTextInput[ans;paragraph;Burada CevaplaBurada Cevapla;1;2000;yes;;]\r\n$else\r\n$ephemeral\r\n$color[00ffff]\r\n$description[🔴 | **Hata**, *yönetici izinleriniz yok!*]\r\n$removeButtons\r\n$endif\r\n```",
+                "komutlar_code": "Yok",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "BDFD GLOBAL İSİM ARATMA": {
+                "isim": "BDFD GLOBAL İSİM ARATMA",
+                "id": "OIqFBMkqJjJspMZQNdIZ",
+                "desc": "ARARTIĞINIZ İSİM DÜNYADA KAÇ KİŞİDE VAR VB. ŞEYLERİ GÖSTERİR. ",
+                "modules": [
+                    "Bdscript2 (olmazsa diğer dillere alıp Deneyin.)"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok\r\n",
+                "komutlar_code": "$nomention\r\n$httpGet[https://app.cortex.fun/api/name?key=happy&cinsiyet=$message[1]]\r\nİsim:$httpResult[name]/cinsiyet:$httpResult[cinsiyet]/Ismin kullanıldığı bölge:$httpResult[country]/bu isim kaç kiside var:$httpResult[total_names]",
+                "kod_rank": "elmas",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            }
+        }
+    }
+]

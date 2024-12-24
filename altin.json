@@ -1,0 +1,160 @@
+[
+    {
+        "kodlar": {
+            "OWO ALTYAPISI": {
+                "isim": "OWO ALTYAPISI",
+                "id": "eZ5nOlrj7dYP7WdgL0O3",
+                "desc": "BDFD OWO ALTYAPISI",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "GELİŞMİŞ OWO ALTYAPISI :\r\n\r\nOvXT85ArSKX4ARZOVSF6C4n34",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "LEVEL ATYAPISI": {
+                "isim": "LEVEL ATYAPISI",
+                "id": "wajRtEqgjLW1IAijqQHm",
+                "desc": "BDFD LEVEL ALTYAPISI ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "LEVEL ALTYAPISI \r\n\r\nbKMo67rW1cfvhgczG3R80A8pE",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "KÜFÜRENGEL ALTYAPISI ": {
+                "isim": "KÜFÜRENGEL ALTYAPISI ",
+                "id": "kz0HGRmW4OlPP4oETBjS",
+                "desc": "BDFD KÜFÜRENGEL ALTYAPISI",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "KÜFÜRENGEL ALTYAPISI\r\n\r\nrwz2iW1yH3boTwnETeEPolKrq",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "GELİŞMİŞ BOT ALTYAPISI ": {
+                "isim": "GELİŞMİŞ BOT ALTYAPISI ",
+                "id": "6Eo8k1IvRWvROfgZXIWI",
+                "desc": "BDFD GELİŞMİŞ BOT ALTYAPISI ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "BDFD GELİŞMİŞ BOT ALTYAPISI\r\n\r\ngK8gRL61ZjU8T75eaZ0GkSR0S",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "ABONE ALTYAPISI ": {
+                "isim": "ABONE ALTYAPISI ",
+                "id": "R2hrVq5wuws29Ex7HUAt",
+                "desc": "BDFD  ABONE ALTYAPISI ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "Abone Altyapısı\r\n\r\n`znnUNILF3H12csjhxbXOidNE8",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "FORMLU TİCKET ALTYAPISI": {
+                "isim": "FORMLU TİCKET ALTYAPISI",
+                "id": "myjt4XwsJ9KcAbT1Eb83",
+                "desc": "BDFD TİCKET ALTYAPISI (FORMU) ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok ",
+                "komutlar_code": "FORMLU TİCKET ALTYAPISI\r\n\r\noMkseS0b7mCmOHiB2ZfikGegm",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BOTLİST ALTYAPISI ": {
+                "isim": "BOTLİST ALTYAPISI ",
+                "id": "u6cAX0Za2tHvs7GOxpzP",
+                "desc": "BDFD BOTLİST ALRYAPISI",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "Botlist Altyapısı\r\n\r\nfHLIxyQWueArOmNEkXsIEoRxQ",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "EĞLENCE ALTYAPISI": {
+                "isim": "EĞLENCE ALTYAPISI",
+                "id": "vtvN3CQrHqlkFdZyYJzV",
+                "desc": "Bdfd Eğlence Altyapısı",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "BDFD eğlence botu altyapısı\r\n\r\nz7lf8DENG5mEu9mea00IL146h",
+                "kod_rank": "altin",
+                "k_adi": "</>",
+                "date": "2/2/2023"
+            },
+            "BDFD ULTRA MULTRA GELİŞMİŞ BOTLİST ALTYAPISI ": {
+                "isim": "BDFD ULTRA MULTRA GELİŞMİŞ BOTLİST ALTYAPISI ",
+                "id": "AVWtU96yWlYuh5f052D7",
+                "desc": "İYİ KULLANMALAR SİZEDE YORUM YAPMAK DÜŞER😎",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "BDFD ULTRA MULTRA GELİŞMİŞ BOT ALTYAPISI\r\n     \r\n             VcDBX4Pgme8HseyUXGdKYt1lo",
+                "komutlar_code": "Yok",
+                "kod_rank": "altin",
+                "k_adi": "EnesK",
+                "date": "2/5/2023"
+            },
+            "BDFD SİLİNEN MESAJ GÖSTERME ALTYAPISI ": {
+                "isim": "BDFD SİLİNEN MESAJ GÖSTERME ALTYAPISI ",
+                "id": "eyjhRwBRYnG0aXNTYGsk",
+                "desc": "Birisi Mesaj Silerse Onu Gösterir ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "İzinsiz Paylaşmak YASAKTIR\r\n\r\nBDFD SİLİNEN MESAJ GÖSTERME\r\n5yf5TZy3DJ9JFYawCmklOMXhK",
+                "kod_rank": "altin",
+                "k_adi": "EnesK",
+                "date": "2/21/2023"
+            },
+            "bdfd": {
+                "isim": "bdfd",
+                "id": "PJo4NlN3hwC8RDgkxGgF",
+                "desc": "152 komutlu bot",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1000009029306814514/1d2c0b75bce8c1255d1ad50997f03dbc.png",
+                "main_code": "jB2QRb2XKQpQa02kQHq1zn6bl",
+                "komutlar_code": "jB2QRb2XKQpQa02kQHq1zn6bl",
+                "kod_rank": "altin",
+                "k_adi": "bonitas",
+                "date": "6/22/2023"
+            }
+        }
+    }
+]

@@ -1,0 +1,188 @@
+[
+    {
+        "kodlar": {
+            "JS KANAL İD BAKMA": {
+                "isim": "JS KANAL İD BAKMA",
+                "id": "uezpyvFCZHCC5xOW73Ln",
+                "desc": "JAVASCRİPT KANAL İD BAKMA KOMUTU",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "const Discord = require(\"discord.js\")\r\nconst db = require(\"quick.db\")\r\nconst soulcastle = require(\"../ayarlar.json\")\r\n\r\nexports.run = async (client, message, args) => {\r\n  let prefix = await db.fetch(`prefix.${message.guild.id}`) || soulcastle.prefix \r\nlet kanal = message.mentions.channels.first() //channel'da olabilir emin değilim\r\nif (!kanal) return message.channel.send(\r\n  new Discord.MessageEmbed()\r\n  .setDescription(`**Doğru Kullanımı :** \\`${prefix}kanal-id #genel-sohbet\\``)\r\n  .setColor(\"BLUE\")\r\n  .setFooter(`Sorgulayan kişi : ${message.author.tag}`,`${message.author.avatarURL({ dynamic: true, format: \"png\", size: 1024 })}`)\r\n  )\r\nmessage.channel.send(\r\n  new Discord.MessageEmbed()\r\n  .setTitle(`🤖 Kanal İD! `)\r\n  .setDescription(`✅ İD :  ${kanal.id}`)\r\n  .setColor(\"BLUE\")\r\n  .setFooter(`Sorgulayan kişi : ${message.author.tag}`,`${message.author.avatarURL({ dynamic: true, format: \"png\", size: 1024 })}`)\r\n  )\r\n\r\n}\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: false,\r\n  aliases: [\"kanalid\"],\r\n  permLevel: 0\r\n};\r\n\r\nexports.help = {\r\n  name: 'kanal-id',\r\n  description: 'Kanalın id sini alır',\r\n  usage: 'kanal-id <kanal>'\r\n}; \r\n\r\n///not:KOMUTLARA ATILACAK///",
+                "kod_rank": "normal",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "JS BOTU SESE SOKMA": {
+                "isim": "JS BOTU SESE SOKMA",
+                "id": "sH2wYb7xiSQxtPCekl0u",
+                "desc": "BOTU SESE SOKAR İŞTE ",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "\r\nclient.on(\"ready\", () => {\r\nclient.channels.cache.get('ses kanal idsi').join();\r\n}); \r\n",
+                "komutlar_code": "Yok",
+                "kod_rank": "normal",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "JS SA AS": {
+                "isim": "JS SA AS",
+                "id": "0qpcekaVI4bKGwjzmhgW",
+                "desc": "SA YAZINCA BOT OTAMATİK OLARAK AS YAZAR",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "\r\nclient.on('message', async msg => {\r\n  if(msg.content == `sa`) return msg.channel.send(`as`);\r\n}); \r\n",
+                "komutlar_code": "Yok",
+                "kod_rank": "normal",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "JS BOTA ÖZEL OTOROL": {
+                "isim": "JS BOTA ÖZEL OTOROL",
+                "id": "dpXCfGNuf7zhCnJoBR4o",
+                "desc": "SUNUCUYA BOT GELDİĞİNDE SADECE ONA ÖZEL ROL VERİR ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "\r\nclient.on('guildMemberAdd', member => {\r\n  if (member.user.bot) member.roles.add(\"verilicek rol id\")\r\n})\r\n",
+                "komutlar_code": "Yok",
+                "kod_rank": "normal",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "JS BUTONLU HESAP MAKİNESİ ": {
+                "isim": "JS BUTONLU HESAP MAKİNESİ ",
+                "id": "CZgvkKHmwxBxK1eLnUSu",
+                "desc": "BUTONLARLA İŞLEM HESAPLAR ",
+                "modules": [
+                    "discord-buttons"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "https://cdn.discordapp.com/attachments/856843296370196501/856843617394360330/message.txt",
+                "kod_rank": "normal",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "JS ÖNERİ": {
+                "isim": "JS ÖNERİ",
+                "id": "Q8ERJkvj4r67DCOQpeEm",
+                "desc": "ÖNERİ KOMUTU",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "const Discord = require(\"discord.js\");\r\nexports.run = async (client, message, args) => {\r\n\r\n  \r\nlet istek = args.slice(0).join(' ')\r\nif(!istek) return message.channel.send('**Öneri Bildirmek için Bir Öneri Yazınız.** :x:')\r\n\r\nconst embed = new Discord.MessageEmbed()\r\n.setTitle(\" Keon Development Bot Öneri Sistemi\")\r\n.setColor('BLUE')\r\n.setDescription(`**Öneriyi Yapan Sunucu** \\`${message.guild.name}\\`  \\n Öneri Yapılan Kanal Kanalı** ${message.channel.name} \\n **Öneriyi Yapan Kullanıcı** <@${message.author.id}> \\n **Yapılan Öneri :** \\`${istek}\\``)\r\nclient.channels.cache.get('önerinin Gönderileceği kanal').send(embed)\r\n  \r\nmessage.channel.send(\" Öneriniz gönderildi. \").then(message => message.delete({ timeout: 5000 }));\r\n};\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: false,\r\n  aliases: [],\r\n  permLevel: 0  \r\n};\r\n\r\nexports.help = {\r\n  name: 'Öneri',\r\n  description: 'Önerinizi bize söylersiniz',\r\n  usage: 'Öneri <öneriniz>'\r\n}\r\n\r\n///komutlara atılacak///\r\n",
+                "kod_rank": "normal",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD DÜELLO KOMUTU VARİABLE ": {
+                "isim": "BDFD DÜELLO KOMUTU VARİABLE ",
+                "id": "EX9PqSRzWzu9Gb8CUEY6",
+                "desc": "DÜELLO KOMUTUNUN VARİABLELERİ",
+                "modules": [
+                    "Variable"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/dbfe35fec0495faf0b2a4827d6651acf.png",
+                "main_code": "Yok ",
+                "komutlar_code": "Variableler :\r\n\r\nfighter1 =\r\nfighter2 =\r\nhealth =",
+                "kod_rank": "normal",
+                "k_adi": "EnesK",
+                "date": "3/11/2023"
+            },
+            "Bhh": {
+                "isim": "Bhh",
+                "id": "TLJ8yHP2q82pFGZtixRl",
+                "desc": "Hhh",
+                "modules": [
+                    "Uhh"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1091010132567146626/bbd139d797a97cfaa8b4a56e074f5d90.png",
+                "main_code": "Hhu",
+                "komutlar_code": "Hhu",
+                "kod_rank": "normal",
+                "k_adi": "l2vy",
+                "date": "7/20/2024"
+            },
+            "Kdk": {
+                "isim": "Kdk",
+                "id": "puomQqtIIzcqIROorGdT",
+                "desc": "Msm",
+                "modules": [
+                    "M"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1091010132567146626/bbd139d797a97cfaa8b4a56e074f5d90.png",
+                "main_code": "Mm",
+                "komutlar_code": "Mm",
+                "kod_rank": "normal",
+                "k_adi": "l2vy",
+                "date": "7/20/2024"
+            },
+            "Md": {
+                "isim": "Md",
+                "id": "JqWsoPzJeHwFBcsgGZXb",
+                "desc": "K",
+                "modules": [
+                    "Mm"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1091010132567146626/bbd139d797a97cfaa8b4a56e074f5d90.png",
+                "main_code": "Kk",
+                "komutlar_code": "Kk",
+                "kod_rank": "normal",
+                "k_adi": "l2vy",
+                "date": "7/20/2024"
+            },
+            "Mmm22333": {
+                "isim": "Mmm22333",
+                "id": "cVWfhBMCRo6t0E0FFf9J",
+                "desc": "M",
+                "modules": [
+                    "M"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1091010132567146626/bbd139d797a97cfaa8b4a56e074f5d90.png",
+                "main_code": "Mmm",
+                "komutlar_code": "Nn",
+                "kod_rank": "normal",
+                "k_adi": "l2vy",
+                "date": "7/20/2024"
+            },
+            "M": {
+                "isim": "M",
+                "id": "ZQEZbRL8UwKP5N4eb8WU",
+                "desc": "Je",
+                "modules": [
+                    "M"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1091010132567146626/3bf17853edce09d4b4f719c036e7bffb.png",
+                "main_code": "M",
+                "komutlar_code": "Mm",
+                "kod_rank": "normal",
+                "k_adi": "l2vy",
+                "date": "7/22/2024"
+            },
+            "K": {
+                "isim": "K",
+                "id": "yuzIZRu1WTKxHMp1jWFu",
+                "desc": "77",
+                "modules": [
+                    "88"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1091010132567146626/3bf17853edce09d4b4f719c036e7bffb.png",
+                "main_code": "8oo",
+                "komutlar_code": "ooo",
+                "kod_rank": "normal",
+                "k_adi": "l2vy",
+                "date": "7/23/2024"
+            }
+        }
+    }
+]

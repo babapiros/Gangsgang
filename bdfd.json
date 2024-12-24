@@ -1,0 +1,902 @@
+[
+    {
+        "kodlar": {
+            "30-komutlu-alt yapı": {
+                "isim": "30-komutlu-alt yapı",
+                "id": "PfkhxaD89l",
+                "desc": "Yok",
+                "modules": [
+                    "Bdfd"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/893771457971236885/153d985b8b800162f3639c614f6c18b3.png",
+                "main_code": "0lZaGDtkmW6vBNYUiAOicILR3",
+                "komutlar_code": "0lZaGDtkmW6vBNYUiAOicILR3",
+                "kod_rank": "bdfd",
+                "k_adi": "๕ۣۜZΞUS™",
+                "date": "10/22/2022"
+            },
+            "39-komutlu bi botur ": {
+                "isim": "39-komutlu bi botur ",
+                "id": "1bfwMa7iAI",
+                "desc": "Bdfd ",
+                "modules": [
+                    "Bdfd"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/893771457971236885/1b771be540a8338fe991d1084b8e5957.png",
+                "main_code": "> GYtnXozWCMYROr5Y8SuTGrrxu",
+                "komutlar_code": "Yok",
+                "kod_rank": "bdfd",
+                "k_adi": "・𝘞𝘦𝘥𝘥𝘪𝘯・",
+                "date": "10/23/2022"
+            },
+            "bdfd": {
+                "isim": "Rol verme",
+                "id": "rcvvVBOWD8",
+                "desc": "Rol verme",
+                "modules": [
+                    "bdfd"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/948970965939912725/ef3caeb0b97dd1aa9f3590e83f1980f9.png",
+                "main_code": "$nomention\r\n$onlyAdmin[üzgünüm dostum yetkin yok] \r\n\r\n$title[Rol Verme]\r\n\r\n$giveRole[$mentioned[>1];$mentionedRoles[1]]\r\n\r\n$argsCheck[>1;`Rol vermem için birisini etiketlemen lazım.`]\r\n\r\n$onlyPerms[manageroles;Bu komutu kullanabilmen için `Rolleri Yönet` yetkisine ihtiyacın var.]\r\n\r\n$suppressErrors[❌ `Seçtiğin rol benim rolümün üstünde kaldığı için rolü veremiyorum.`]\r\n\r\n\r\n$description[\r\n`Rolü Veren Yetkili:` <@$authorID>\r\n\r\n`Rol Verilen Kişi:` <@$mentioned[1]>\r\n\r\n`Verilen Rol:` <@&$mentionedRoles[<]>]\r\n\r\n$color[ffffff]",
+                "komutlar_code": "yok",
+                "kod_rank": "bdfd",
+                "k_adi": "TersOyunda",
+                "date": "10/23/2022"
+            },
+            "Kullancı-Bilgi": {
+                "isim": "Kullancı-Bilgi",
+                "id": "bVPpMNOmek",
+                "desc": "bdfd",
+                "modules": [
+                    "bdfd"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/948970965939912725/ef3caeb0b97dd1aa9f3590e83f1980f9.png",
+                "main_code": "$nomention\r\n$author[Kullanıcı Bilgi]\r\n$authorIcon[$authorAvatar]\r\n$description[\r\n👤 **| `Kullanıcı adı: $username[$mentioned[1]]# $discriminator[$mentioned[1]]`\r\n🆔 | `ID : $mentioned[1]`\r\n🤖 | `Botmu : $replaceText[$replaceText[$isBot[$mentioned[1]];true;Evet;-1];false;Hayır;-1]`\r\n🕒 | `Hesap oluşturulma Tarihi : $creationDate[$mentioned[1]]`\r\n🔧 | `En yüksek rol :` <@&$highestRole[$mentioned[1]]>\r\n🔧 | `En düşük rol : ` <@&$lowestRole[$mentioned[1]]>\r\n👑 | `Yönetici mi: $replaceText[$replaceText[$isAdmin[$mentioned[1]];false;Değil;-1];true;Evet;-1]`\r\n🔒 | `DM açık, kapalı : $replaceText[$replaceText[$isUserDMEnabled[$mentioned[1]];true;Açık;-1];false;Kapalı;-1]`\r\n🚧 | `Kanal sayısı : $channelCount`\r\n🖼 | `Profil fotoğrafı :`**\r\n$image[$userAvatar[$mentioned[1]]]]\r\n$color[ffff00]\r\n$footer[$username]\r\n$addTimestamp\r\n$footerIcon[$authorAvatar]\r\n$addReactions[✅]\r\n$onlyIf[$mentioned[1]!=;❎ Birini etiketle]\r\n$suppressErrors[❎ Birini etiketle]",
+                "komutlar_code": "yok",
+                "kod_rank": "bdfd",
+                "k_adi": "TersOyunda",
+                "date": "11/6/2022"
+            },
+            "Mesaj sil": {
+                "isim": "Mesaj sil",
+                "id": "0hWU0N5mtq",
+                "desc": "Mesaj sil",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/840158550495723530/344b75958d412342c048020de1b8b01d.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$clear[$message]\r\n$title[✅ $message Adet Mesaj Silindi✅]\r\n$description[$message Adet Mesaj silindi]\r\n\r\n$footer[Komutu kullanan kişi: $username]\r\n$addTimestamp\r\n\r\n$color[$random[0;999999]]",
+                "kod_rank": "bdfd",
+                "k_adi": "PsychoPath",
+                "date": "11/16/2022"
+            },
+            "Taş Kağıt makas": {
+                "isim": "Taş Kağıt makas",
+                "id": "fBviEvP8Xo",
+                "desc": "Tkm",
+                "modules": [
+                    "BDScript"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/948970965939912725/ef3caeb0b97dd1aa9f3590e83f1980f9.png",
+                "main_code": "$nomention\r\n$color[f602cf]\r\n$title[Taş, Kağıt,Makas]\r\n$description[Sen; $noMentionMessage\r\n<@$mentioned[1]>;$randomText[Taş;Kağıt;Makas]]\r\n$argsCheck[>2;Lütfen ilk önce birini etiketleyip taş, kağıt, makas yazın]",
+                "komutlar_code": "yok",
+                "kod_rank": "bdfd",
+                "k_adi": "TersOyunda",
+                "date": "11/26/2022"
+            },
+            "Aşk ölç": {
+                "isim": "Aşk ölç",
+                "id": "6WfZWbOcZu",
+                "desc": "Aşk ölç",
+                "modules": [
+                    "BDScript"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/948970965939912725/ef3caeb0b97dd1aa9f3590e83f1980f9.png",
+                "main_code": "$argsCheck[>1;Birini Etiketlemelisin]\r\n$nomention\r\n$color[#ff2025]\r\n$title[O kişiyi ne kadar seviyosun  yada seviliyosun]\r\n$description[\r\n$username onu ne kadar seviyor <@$mentioned[<]>$randomText[%0;%5💛;%10💛💛olmaz sal bunu;%15💛💛💛;%20💛💛💛💛sanki;%25💛💛💛💛💛;%30💛💛💛💛💛💛eh işte;%35💛💛💛💛💛💛💛;%40💛💛💛💛💛💛💛💛daha iyi olabilir;%45💛💛💛💛💛💛💛💛💛;%50💛💛💛💛💛💛💛💛💛💛yanii iyi gibi;%55💚;%60💚💚Olr gibi ne dersin;%65💚💚💚;%70💚💚💚💚onu çok seviyorsun;%75💚💚💚💚💚;%80💚💚💚💚💚💚bu büyük bir aşkın başlangıcı olabilirmi;%85💚💚💚💚💚💚💚;%90💚💚💚💚💚💚💚💚çok iyi bir çiftsiniz couple yapmaya ne dersiniz?;%95💚💚💚💚💚💚💚💚💚;%100💝siz birbiriniz için yaratılmışsınız]]",
+                "komutlar_code": "yok",
+                "kod_rank": "bdfd",
+                "k_adi": "TersOyunda",
+                "date": "11/26/2022"
+            },
+            "BDFD GELİŞMİŞ PİNG": {
+                "isim": "BDFD GELİŞMİŞ PİNG",
+                "id": "Y6sJ8u3fDK4qND8k0NL0",
+                "desc": "BDFD GELİŞMİŞ PİNG KOMUTU",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "yok",
+                "komutlar_code": "[prefix]ping\r\n```$nomention\r\n$title[$username[$botID] Gecikme Değerleri.]\r\n$description[Ping: **$pingms**\r\nBot ping: **$botNodems**\r\nKomut ping: **$executionTimems**]\r\n$footerIcon[$authorAvatar]\r\n$footer[Komutu kullanan kullanıcı: $username#$discriminator[$authorID]]\r\n$color[$random[000000;999999]]\r\n$addButton[no;Yenile;Yenile;Secondary;no;🔄]```\r\n\r\n$onInteraction[Yenile]\r\n```$nomention\r\n$title[$username[$botID] Gecikme Değerleri.]\r\n$description[Ping: **$pingms**\r\nBot ping: **$botNodems**\r\nKomut ping: **$executionTimems**]\r\n$footerIcon[$authorAvatar]\r\n$footer[Komutu kullanan kullanıcı: $username#$discriminator[$authorID]]\r\n$color[$random[000000;999999]]\r\n```",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/30/2023"
+            },
+            "BDFD DM UYARI": {
+                "isim": "BDFD DM UYARI",
+                "id": "9NRboV2GBy0LVkpVO6DU",
+                "desc": "UYARI KODU",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "yok",
+                "komutlar_code": "$nomention\r\n$deletecommand\r\n$title[Uyarıldın!]\r\n$dm[$mentioned[1]]\r\n$description[\r\nUyarılan Kullanıcı:``` ```<@$mentioned[1]>```\r\nUyaran Yetkili: ```<@$authorID>```\r\n```$color[00FF00]\r\n$argsCheck[>1;Yanlış Kullanım -uyar @kullanıcı sebep]\r\n$onlyPerms[kick;:exclamation️:Sadece Yöneticiler Bu Komuta Erişe Bilir!]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/30/2023"
+            },
+            "ULRTRA RESİMLİ GELİŞMİŞ LEVEL KOMUTU": {
+                "isim": "ULRTRA RESİMLİ GELİŞMİŞ LEVEL KOMUTU",
+                "id": "cRE77pcVMY9W4ZmZ7JIa",
+                "desc": "Abiniz Yaptı KULLANIN :D",
+                "modules": [
+                    "BDSCRİPT UNSTBALE "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "yok",
+                "komutlar_code": "(prefix)rank\r\n```js\r\n$nomention\r\n$color[$random[111111;999999]]\r\n$image[https://vacefron.nl/api/rankcard?username=$replaceText[$username[$mentioned[1;yes]]; ;+;-1]&avatar=$userAvatar[$mentioned[1;yes]]?size=4096&level=$getUserVar[level;$mentioned[1;yes]]&rank=&currentxp=$getUserVar[talk;$mentioned[1;yes]]&nextlevelxp=$getUserVar[req;$mentioned[1;yes]]&previouslevelxp=0&custombg=/attachments/775757240648466452/791348420844716052/1608742528817.jpg&xpcolor=F8F8F9&isboosting=false]\r\n$footer[$username[$mentioned[1;yes]] needs $replaceText[$sub[$sum[$getUserVar[req;$mentioned[1;yes]];1];$getUserVar[talk;$mentioned[1;yes]]];-; ;1] seviye atlamak için daha fazla EXP]\r\n\r\n```\r\n\r\n**A-Z KOMUTLAR AÇIYORUZ VE BUNU YAPIŞTIRIYORUZ **\r\n```js\r\n $nomention\r\n$nomention\r\n$setUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;talk;1];%false%;nothing2;1];0]\r\n \r\n$setUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;nothing2;1];%false%;talk;1];$sum[$getUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;nothing2;1];%false%;talk;1]];$random[5;25]]]\r\n \r\n$$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;channelSendMessage;1];%false%;setServerVar;1][$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;$channelID;1];%false%;nothing;1];<@$authorID> **Seviye Atladın :** $sum[$getUserVar[level];1]]\r\n \r\n$setUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;level;1];%false%;nothing2;1];$sum[$getUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;level;1];%false%;nothing2;1]];1]]\r\n$setUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;req;1];%false%;nothing2;1];$sum[$getUserVar[$replaceText[$replaceText[%$checkCondition[$getUserVar[talk]>$getUserVar[req]]%;%true%;req;1];%false%;nothing2;1]];$random[100;220]]]\r\n\r\n```\r\n\r\nNot: A Z YE KOMUTLARI DİLİ BDSCRİPT UNSTBALE RANK TA UNSTBALE ",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/30/2023"
+            },
+            "BDFD SLASHLI PİNG": {
+                "isim": "BDFD SLASHLI PİNG",
+                "id": "LauL63VZJYjnKUr82bf5",
+                "desc": "SLASHLI PİNG KOMUTU",
+                "modules": [
+                    "BDSCİRPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "/ping\r\n$nomention\r\n$author[$username[$botID] Gecikme Süresi]\r\n$authorIcon[$userAvatar[$botID]]\r\n$color[#0000ff]\r\n$description[\r\n**•|** Ping: $ping\r\n]\r\n$footer[Komut $username#$discriminator[$authorID] tarafından kullanıldı]\r\n$footerIcon[$authorAvatar]\r\n$addTimestamp\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/30/2023"
+            },
+            "BDFD XOX": {
+                "isim": "BDFD XOX",
+                "id": "cWqISB5eM1BJN3c1i2I5",
+                "desc": "XOX OYUNU ",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "yol",
+                "komutlar_code": "**__TETİKLEYİCİ__**:  `*xox-oyna`\r\n**__KOMUT DİLİ__**:  `BDScript 2`\r\n**__KOD LİNK__**:  ||<https://mcpaste.com/25e22644ecea1866b08bd5330c905a5d>||\r\n\r\n**__TETİKLEYİCİ__**:  `$onInteraction`\r\n**__KOMUT DİLİ__**:  `BDScript 2`\r\n**__KOD LİNK__**:  ||<https://mcpaste.com/76359912c2ea29ac4db6a6ffde3340c2>||\r\n\r\n**__DEĞİŞKEN__**:  `xo`\r\n**__DEĞER__**:  `boş bırak`",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD OTO EMOJİ": {
+                "isim": "BDFD OTO EMOJİ",
+                "id": "cTKkJ6ImCywg1mW3uF2O",
+                "desc": "OTO EMOJİ SİSTEMİ",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "**TETİKLEYİCİ** emoji\r\n$nomention\r\nOtomatik Emoji Açıldı.\r\n$awaitFunc[döngü] \r\n\r\n$awaitedCommandError[döngü]\r\n$nomention\r\n$awaitFunc[döngü]\r\n\r\n$awaitedCommand[döngü;]\r\n$nomention\r\n$awaitFunc[döngü]\r\n$addCmdReactions[✔️] \r\n\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD SİLAHLI BANKA SOY": {
+                "isim": "BDFD SİLAHLI BANKA SOY",
+                "id": "gpSNCHIh0BMtP0RqziOP",
+                "desc": "Silah İle Banka Soyar ",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$title[🏦 BANKA SOYULDU! 🏦] \r\n$setVar[param;$sum[$getVar[param;$authorID];$random[450;800]];$authorID]\r\n$description[\r\nBanka Soyarak $random[450;800]:GKuc: Kazandın! :hirsiz:\r\n\r\nPolisler Seni Yakalamadan Hemen Kaç!! :polis:]\r\n$cooldown[24h; 1 işe daha girişemesin federaller heryerde seni arıyo!! :polis: `%time%` Beklemelisin!!]\r\n$onlyIf[$getUserVar[silah]==Var;Üzgünüm Ama Silahın Yok. 🔫]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD BİLET ÇARK": {
+                "isim": "BDFD BİLET ÇARK",
+                "id": "pJK9xADxrtUHRePqnN7d",
+                "desc": "BİLET ÇARK KOMUTU",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$color[FFFFFF]\r\n$title[çarkı çeviriyom]\r\n$description[<@$authorID> Çark Çevirdi Ve $random[400;600] Kazandı]\r\n$cooldown[10m; `%time%` bekle ]\r\n$setVar[param;$sum[$getVar[param;$authorID];$random[400;600]];$authorID]\r\n$onlyIf[$getUserVar[bilet]==Var;Üzgünüm Ama Biletin Yok.]\r\n$setUserVar[bilet;Yok]\r\n$image[https://media1.tenor.com/images/1442baf5b66b2edf9634add92d999c58/tenor.gif?itemid=11209519]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD BIÇAK SOY": {
+                "isim": "BDFD BIÇAK SOY",
+                "id": "PBdJaxEV10uOx8caiH3u",
+                "desc": "EKONOMİ KOMUTU",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$cooldown[6h;⏰| Birilerini Soymayı Ne Kadar Çok Seviyorsun!! İşte Bu Yüzden Sana `6 Saat` Sınır Koyduk. Kalan Süre: `%time%`] \r\n$onlyIf[$getUserVar[bıçak]==Var;<@$authorID> Üzgünüm Ama Bıçağın Yok. 🔪]\r\n$setVar[param;$sum[$getVar[param;$authorID];$random[1000;2000]];$authorID]\r\n$onlyIf[2000<$getVar[param;$mentioned[1]];Üzgünüm Ama Etiketlediğin Kullanıcının Parası **2000**'den Az!!]\r\n$title[ Soyma Başarılı! ]\r\n$description[<@$authorID>, <@$mentioned[1]> Adlı Kullanıcıdan $random[1000;2000] Soydun! \r\nPolisler Seni Yakalamadan Hemen Kaç! ]\r\n$argsCheck[>1;Lütfen Soymak İstediginiz Kişiyi Etiketleyin!]\r\n$setVar[param;$sub[$getVar[param;$mentioned[1]];$random[1000;2000]];$mentioned[1]]\r\n$onlyIf[$authorID!=$mentioned[1];Kendini Soyamazsın!]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD SİGARA İÇ": {
+                "isim": "BDFD SİGARA İÇ",
+                "id": "9Umx5nfX7KdMIi48YFy0",
+                "desc": "SİGARA İÇERSİNİZ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$onlyIf[$getUserVar[sigara]==Var;Sigaran Yok.]\r\n$title[🚬 Füüppp Misss 🚬]\r\n$description[$username Sigara Yaktın Ve İçtin, Çek çekkk!! 🚬\r\nYak Bi Tane Daha Oh ohh!! 🔥\r\n]\r\n$addField[Toplam Atılan Stres;$random[0;101]%]\r\n\r\n$addField[Stres Atan;<@$authorID>]\r\n\r\n$addField[Sigara Boyutu;$randomText[Kısa;Uzun]]\r\n$footer[Yak yakkk 🔥]\r\n$footerIcon[$authorAvatar]\r\n$setUserVar[sigara;Yok]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD YETKİLİ PARA EKLE": {
+                "isim": "BDFD YETKİLİ PARA EKLE",
+                "id": "pUYq4pFVJIacDKp430XJ",
+                "desc": "PARA EKLER (EKONOMİ) ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$nomention\r\n$onlyPerms[admin;Bu Komutu Kullanabilmen İçin `Yönetici` İzninin Olması Gerekmektedir]\r\n$setVar[param;$sum[$getVar[param;$mentioned[1]];$noMentionMessage];$mentioned[1]]\r\n$description[$username[$mentioned[1]] İsimli Kișiye Başarıyla $noMentionMessage TL bakiyesine eklendi]\r\n$footer[$date]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD YETKİLİ PARA SİL": {
+                "isim": "BDFD YETKİLİ PARA SİL",
+                "id": "h3U8gl1jO1BH1VoEQPwf",
+                "desc": "PARAYI SİLER ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$onlyAdmin[Yetkin Yok !]\r\n$argsCheck[>1;Sileceğim Kişiyi Etiketlemelisin !]\r\n$argsCheck[>2;Ne kadar miktar gireceğimi yazmalısın !]\r\n`$username[$mentioned[1]]#$discriminator[$mentioned[1]]` Kişinin `$noMentionMessage` Miktarda TL Silinmiştir.\r\n$setVar[param;$sub[$getVar[param;$mentioned[1]];$noMentionMessage];$mentioned[1]]\r\n$onlyIf[$isNumber[$noMentionMessage]!=false;Sileceğim Miktar TL Değil !]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD BANKADAN PARA ÇEK ": {
+                "isim": "BDFD BANKADAN PARA ÇEK ",
+                "id": "Wa7MISMUpaBU3oOmVPdt",
+                "desc": "BANKADAN PARA ÇEKER",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$onlyIf[$message!=;Bir Miktar Belirt !]\r\n$onlyIf[$isNumber[$message]!=false;Miktar Sayı Olmalıdır.]\r\n$onlyIf[$message>0; Girdiğin Miktar 0 üstü olmalıdır]\r\n\r\n$onlyIf[$message<=$getVar[bparam;$authorID];Bankanda Yeterli Miktarda Tyco Para Yok !]\r\nÇekilen Miktar; `$message`\r\n\r\nŞuan ki TL bakiyeniz : `$sum[$getUserVar[param;$authorID];$message]`\r\n\r\nŞuan ki Banka Bakiyeniz : `$sub[$getUserVar[bparam;$authorID];$message]`\r\n\r\n$setUserVar[param;$sum[$getUserVar[param;$authorID];$message];$authorID]\r\n$setUserVar[bparam;$sub[$getUserVar[bparam;$authorID];$message];$authorID]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD BANKAYA PARA YATIR": {
+                "isim": "BDFD BANKAYA PARA YATIR",
+                "id": "kbhsbPjWIqkhCCYx5O8w",
+                "desc": "PARANIZI BANKAYA YATIRMANIZI SAĞLAR ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$onlyIf[$message!=;Bir Miktar Belirt !]\r\n$onlyIf[$isNumber[$message]!=false;Miktar Sayı Olmalıdır.]\r\n$onlyIf[$message>0; Girdiğin Miktar 0 üstü olmalıdır]\r\n\r\n$onlyIf[$message<=$getVar[param;$authorID]; Üstünüzde Yeterli Miktarda TL Yok !]\r\nYatırılan Miktar; `$message`\r\n\r\nŞuan ki TL Bakiyeniz: `$sub[$getVar[param;$authorID];$message]`\r\n\r\nŞuan ki Banka Bakiyeniz: `$sum[$getVar[bparam;$authorID];$message]`\r\n\r\n$setVar[param;$sub[$getVar[param;$authorID];$message];$authorID]\r\n$setVar[bparam;$sum[$getVar[bparam;$authorID];$message];$authorID]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD CÜZDAN": {
+                "isim": "BDFD CÜZDAN",
+                "id": "HZKktiRvgTjNllLIPRIS",
+                "desc": "(PREFİX)cüzdan yazdığınızda PARANIZI GÖSTERİR",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Variable\r\nparam = 0\r\n\r\nbanka = 0",
+                "komutlar_code": "**Cüzdan**\r\n$nomention\r\n$thumbnail[$authorAvatar]\r\n$color[36393F]\r\n$title[Cüzdan]\r\n$description[Sende **$getVar[param]** Para Var!]\r\n$footer[Çalış Ve Para Kazan!]\r\n\r\n**Paraları Sıfırla**\r\n$onlyAdmin[Bu komutu kullanabilmek için yetkiniz bulunmamaktadır!]\r\n$nomention\r\n$resetUserVar[param]\r\n$resetUserVar[banka]\r\n$title[**Para Sıfırlandı!**]\r\n$description[Bütün Paralar Sıfırlandı!]\r\n$footer[$date]\r\n$deletecommand\r\n$deleteIn[30s]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD COİNFLİP": {
+                "isim": "BDFD COİNFLİP",
+                "id": "TdFoD11LZz936rshmNKj",
+                "desc": "ELİNİZDEKİ PARAYI YATIRARAK COİNFLİP OYNARSINIZ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "\r\n$nomention\r\n$onlyIf[50000>=$message[2];Slota Maksimum 50.000 Yatırabilirsin!]\r\n$argsCheck[>1;Yazı mı?, Tura mı?]\r\n$argsCheck[>2;Miktar Girmelisin!]\r\nAtılıyor...\r\n$editIn[2s;$randomText[Yazı;Tura] geldi $replaceText[$replaceText[$checkCondition[$message[1]==$toLowercase[$randomText[Yazı;Tura]]];true;$multi[$message[2];2] Kazandın!];false;$message[2] Kaybettin!]]\r\n$setVar[param;$replaceText[$replaceText[$checkCondition[$message[1]==$toLowercase[$randomText[Yazı;Tura]]];true;$sum[$getVar[param;$authorID];$multi[$message[2];2]]];false;$sub[$getVar[param;$authorID];$message[2]]];$authorID]\r\n\r\n$onlyIf[$getVar[param;$authorID]>=$message[2];`$message[2]` Paran Yok!]\r\n$onlyIf[$message[2]>0;0 Yatıramazsın!]\r\n$onlyIf[$isNumber[$message[2]]!=false;a!cf {yazı/tura} {para}]\r\n$onlyIf[$message[2]!=;`a!cf {yazı/tura} {para}`]\r\n$onlyIf[$checkCondition[$message[1]==yazı]$checkCondition[$message[1]==tura]!=falsefalse;`a!cf {yazı/tura} {para}`]\r\n$onlyIf[$message[1]!=;`a!cf {yazı/tura} {para}`] \r\n$setVar[xp;$sum[$getVar[xp;$authorID];$random[1;3];$authorID]]\r\n$cooldown[7s;%time-s% Beklemelisin!]\r\n$suppressErrors[`a!cf {yazı/tura} {miktar}`] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD OLTA AL": {
+                "isim": "BDFD OLTA AL",
+                "id": "X6DRF0sKWdmFQM1d86Y8",
+                "desc": "PARANIZ VARSA OLTA ALIRSINIZ ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "\r\nVariableler\r\nolta:no\r\n\r\nparam:0",
+                "komutlar_code": "$nomention\r\n$color[FFFFFF]\r\n$onlyIf[$getVar[para;$authorID]>=550;**<@$authorID>, cüzdanında yeterli miktarda paran yok!**]\r\n$setVar[olta;yes;$authorID]\r\n$description[**<@$authorID>, 1 adet olta başarıyla alındı.**\r\n$addField[Ödenilen Ücret:;**550 $**]]\r\n$onlyIf[$getVar[olta;$authorID]!=yes;**<@$authorID> zaten bir oltan bulunuyor.**]\r\n$setVar[para;$sub[$getVar[para;$authorID];550];$authorID]\r\n$footer[Keon Development]  \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD SLOT": {
+                "isim": "BDFD SLOT",
+                "id": "oD80fFzM7Imguo87rzQw",
+                "desc": "PARAYLA SLOT OYNARSINIZ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$if[$randomText[Çıktı;Çıkmadı]==Çıktı]\r\n$onlyIf[$isNumber[$message[1]]!=;**Lütfen para belirtiniz.**]\r\n$onlyIf[$message[1]!=;**Lütfen miktar yazınız.**]\r\n$onlyIf[$getVar[param;$authorID]>$message;**Paran yetersiz**]\r\n$footer[$username[$botID] | Ekonomi] \r\n$footerIcon[$authorAvatar]\r\n$color[$random[1;999999]]\r\n$globalCooldown[8s;**Lütfen biraz yavaşlayınız**]\r\n$title[__Slot__]\r\n$description[\r\n$randomText[🍆🍆🍆;🍑🍑🍑;🍎🍎🍎;🍅🍅🍅] **$multi[3;$message[1]]**TL kazandın!]\r\n$setVar[param;$sum[$getVar[param;$authorID];$multi[3;$message[1]]];$authorID]\r\n$suppressErrors[Hata]\r\n$else\r\n$onlyIf[$isNumber[$message[1]]!=;**Lütfen para belirtiniz.**]\r\n$onlyIf[$message[1]!=;**Lütfen miktar yazınız.**]\r\n$onlyIf[$getVar[para;$authorID]>$message;**Paran yetersiz**]\r\n$footer[$username[$botID] | Ekonomi] \r\n$footerIcon[$authorAvatar]\r\n$color[$random[1;999999]]\r\n$globalCooldown[8s;**Lütfen biraz yavaşlayınız**]\r\n$title[__Slot__]\r\n$description[\r\n$randomText[🍆🍅🍅;🍆🍎🍑;🍎🍆🍎;🍆🍎🍑] Çıkmadı **$message[1]**TL kaybettin]\r\n$setVar[param;$sub[$getVar[param;$authorID];$message[1]];$authorID]\r\n$endif\r\n$if[$randomText[1;2]==1]\r\n__**SLOTS**__\r\n$randomText[1️⃣ 1️⃣ 1️⃣;2️⃣ 2️⃣ 2️⃣;3️⃣ 3️⃣ 3️⃣] ***$multi[2;$message] para kazandın.***\r\n$setVar[param;$sum[$getVar[param;$authorID];$multi[2;$message]];$authorID]\r\n$else\r\n__**SLOTS**__\r\n$randomText[1️⃣ 2️⃣ 1️⃣;3️⃣ 2️⃣ 3️⃣;1️⃣ 1️⃣ 3️⃣] ***$message para kaybettin.***\r\n$setVar[param;$sub[$getVar[param;$authorID];$message];$authorID]\r\n$endif\r\n$argsCheck[>1;Slot oynayacağın para miktarını girmelisin.]\r\n$suppressErrors[Bu bir sayı değil.]\r\n$onlyIf[$getVar[param;$authorID]>$message;Belirttiğin miktarda paran yok.] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD SIRALAMA ": {
+                "isim": "BDFD SIRALAMA ",
+                "id": "eirVRPgpfvR4jktBUai3",
+                "desc": "SIRALAMAYI GÖSTERİR",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "\r\n$nomention\r\n$userLeaderboard[param;asc]\r\n$footer[$username[$authorID] Tarafından İstenildi]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "BDFD PARA GÖNDER ": {
+                "isim": "BDFD PARA GÖNDER ",
+                "id": "DH2lApYHU0oeTc4D45wM",
+                "desc": "BELİRTTİĞİNİZ KİŞİYE BELİRTTİĞİNİZ MİKTARDA PARA GÖNDERİR",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$setVar[param;$sum[$getVar[param;$mentioned[1]];$message[2]];$mentioned[1]]\r\n$setVar[param;$sub[$getVar[param];$message[2]]]\r\n$onlyIf[$message[2]<$getVar[param;$authorID]; Yeterli Paran Yok]\r\n$nomention\r\n$color[$random[0;9999]]\r\n$allowMention\r\n$title[Para Gönder]\r\n$description[ <@$mentioned[1]> $message[2] A-Para Gönderdin!]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "EMBED MESAJ": {
+                "isim": "EMBED MESAJ",
+                "id": "SW8vqXHg2rP3jnFHmlPC",
+                "desc": "BDFD EMBED MESAJ KOMUTU ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$color[$random[0;99999]]\r\n$title[Embed Mesaj]\r\n$description[$message]\r\n\r\n$argsCheck[>1; <@$authorID>, bir mesaj yazmalısın.] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            " İSTATİSTİK": {
+                "isim": " İSTATİSTİK",
+                "id": "aAthAplBmgfgV9RtANkJ",
+                "desc": "BDFD İSTATİSTİK KOMUTU ",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$title[İSTATİSTİK]\r\n$description[\r\n\r\n🖨▫️**__Toplam Bulunan Komut Sayım__**\r\n**Toplam __$commandsCount__ Komutum Bulunuyor.**\r\n\r\n📩▫️**Kurulduğum Tarih**\r\n**__$creationDate[botidnizi yazın]__ Tarihinde Kuruldum.**\r\n\r\n🗳▫️**__En Son Güncellenme Zamanım__**\r\n**__$uptime__ Önce Güncellendim.**\r\n\r\n🔱▫️**__Ping__**\r\n**Ping Sayım __$ping__'dür.**\r\n\r\n🔗▫️**Bu Sunucu İçin Prefixim**\r\n**Prefixim: __$getServerVar[prefix]__**\r\n]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "DBL BİLGİ ": {
+                "isim": "DBL BİLGİ ",
+                "id": "6NJSKeMRrLTXMpMNK9K5",
+                "desc": "BDFD DBL BİLGİ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok ",
+                "komutlar_code": "$nomention\r\n$color[$random[0;99999]]\r\n$author[$username[$message]#$discriminator[$message]]\r\n$authorIcon[$userAvatar[$message]]\r\n$image[https://discordbots.org/api/widget/$message.png]\r\n\r\n$argsCheck[>1; <@$authorID>, bir bot ID'si yazmalısın.]\r\n$onlyIf[$isNumber[$message]!=false; <@$authorID>, bir bot ID'si yazmalısın.] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "SABİTLE": {
+                "isim": "SABİTLE",
+                "id": "mwaXWBAob9uzOYk0tqEA",
+                "desc": "BDFD SA İTLE KODU",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$argsCheck[>1; <@$authorID>, bir mesaj yazmalısın!]\r\n$pinMessage\r\n$noMentionMessage  \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "WASTED KOMUTU ": {
+                "isim": "WASTED KOMUTU ",
+                "id": "7TPzfSmds9iGkYUylnSN",
+                "desc": "BDFD WASTED KOMUTU",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$argsCheck[>1;Kullanım: (prefix) <@user>`]\r\n$title[ WASTED !]\r\n$image[https://some-random-api.ml/canvas/wasted?avatar=$userAvatar[$mentioned[1;yes]]]\r\n$color[00FF91]\r\n$footer[$username]\r\n$footerIcon[$authorAvatar]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "EVAL": {
+                "isim": "EVAL",
+                "id": "v2H1dMzgTVSuEMLAlhm4",
+                "desc": "BDFD EVAL İŞTE",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$eval[$message]\r\n$onlyForIDs[İD YAZIN; Bu komutu kullanman için sahibim olman gerek!]  \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "ROL OLUŞTUR": {
+                "isim": "ROL OLUŞTUR",
+                "id": "1S1gItbmRGAAt22gPlYt",
+                "desc": "BDFD ROL OLUŞTUR KLONU ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention \r\n$description[<@$authorID> $message adlı rol başarıyla oluşturuldu]\r\n$footer[Kullanan: $username]\r\n$addTimestamp\r\n$footerIcon[$authorAvatar]\r\n$color[fffff]\r\n$onlyPerms[admin;sadece yönetici izinli olanlar kullanabilir]\r\n$createRole[$noMentionMessage;ffffff;yes;yes]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Uyar": {
+                "isim": "Uyar",
+                "id": "tDqkkd5jR5ZmWD68yknC",
+                "desc": "Uyar",
+                "modules": [
+                    "YOK"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/847743717062082570/60dba55378b81441c9693637f73aefc5.png",
+                "main_code": "Yok",
+                "komutlar_code": "**{prefix}uyar**\r\n```\r\n$nomention\r\n$title[Uyarıldın!]\r\n$description[\r\n👤 **Yetkili** : <@$authorID>\r\n\r\n🔥 **Uyarı Alan** : <@$mentioned[1]>\r\n\r\n⚠️ **Sebep** : $message[1]\r\n]\r\n\r\n$color[FFFFF]\r\n\r\n$footer[$username Kullandı]\r\n\r\n$addTimestamp\r\n\r\n$onlyAdmin[❌ <@$authorID> **Bu komut için yetkin yetmiyor**]\r\n\r\n$argsCheck[>1;❌ <@$authorID> **uyarıcağın kişiyi etiketle**] \r\n\r\n$addReactions[⚠️;🔥;☢️]\r\n```",
+                "kod_rank": "bdfd",
+                "k_adi": "TropGul",
+                "date": "1/31/2023"
+            },
+            "Ses olusutr": {
+                "isim": "Ses olusutr",
+                "id": "Inb3PYrNPGydefYysbyv",
+                "desc": "Ses",
+                "modules": [
+                    "YOK"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/847743717062082570/60dba55378b81441c9693637f73aefc5.png",
+                "main_code": "Yok",
+                "komutlar_code": "**Ses Kanalı Oluştur**\r\n```diff\r\n$nomention \r\n$title[Kanal Oluşturuldu!]\r\n$editIn[5s;Kanal oluştu!]\r\n$description[kanal oluşuyor...]\r\n$createChannel[$message;voice]\r\n$footer[$username kullandı]```",
+                "kod_rank": "bdfd",
+                "k_adi": "TropGul",
+                "date": "1/31/2023"
+            },
+            "KULLANICI BİLGİ": {
+                "isim": "KULLANICI BİLGİ",
+                "id": "VdKjIHCLvQKzhm1ti20m",
+                "desc": "ETİKETLEDİĞİNİZ KULLANICININ BİLGİLERİNİ GÖSTERİR / HESAP NE ZAMAN KURULMUŞ VB. ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "**Kullanıcı Bilgi**\r\n\r\n$nomention\r\n$color[FF0000]\r\n$thumbnail[$userAvatar[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]]\r\n$author[$username[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]]\r\n$authorIcon[$userAvatar[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]]\r\n$description[Kullanıcı: `$username[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]#$discriminator[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]`\r\nID: `$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]`\r\nHesap Oluşturma Tarihi: `$creationDate[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]\r\n`\r\nBot: `$isBot[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]]`\r\nAvatar: [Link]($userAvatar[$replaceText[$replaceText[$isNumber[$message[1]];true;$message[1];1];false;$mentioned[1;yes];1]])]\r\n$footer[Kullanan: $username]",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/4/2023"
+            },
+            "FİLM ARA": {
+                "isim": "FİLM ARA",
+                "id": "F6pePqRqn9V65ii3KaNG",
+                "desc": "BDFD FİLM ARA KOMUTU",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$reply\r\n$color[#303136]\r\n$httpGet[https://apiv1.spapi.ga/fun/movie?movname=$noMentionMessage]\r\n$addField[Film Adı;`$httpResult[title]`]\r\n$addField[Çıkış Tarihi;`$httpResult[release_date]`]\r\n$addField[IMDb Puanı;`$replaceText[$httpResult[vote_average];0; ;-1]`]\r\n$image[http://image.tmdb.org/t/p/original/$httpResult[poster_path]]\r\n$addField[Hikaye;`$httpResult[overview]`]\r\n$onlyIf[$httpResult[title]!=;<@$authorID>, `$noMentionMessage` filmi bulunamadı.] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Server ıcon": {
+                "isim": "Server ıcon",
+                "id": "ej5tivpDMlCvDcR03pDP",
+                "desc": "BDFD Server İcon komutu ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$title[$serverName[$guildID] | İcon]\r\n$image[$serverIcon]\r\n$footer[Keon Development]\r\n$color[ffffff]\r\n$footerIcon[$authorAvatar]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Ban log ": {
+                "isim": "Ban log ",
+                "id": "g1Zi2ibn5F75lTgPIQ6Z",
+                "desc": "BDFD ban log komutu",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$onBanAdd[kanal id]\r\n$nomention\r\n$title[Bir Kullanıcı Yasaklandı!]\r\n$description[**Banlanan Kişi:** `$username`\r\n\r\n**Saat:** `$sum[$hour;3]:$minute`]\r\n$footer[Keon Development]\r\n$color[ff0000]\r\n```\r\n$onBanRemove[kanal id]\r\n```\r\n$nomention\r\n$title[Bir Kullanıcının Yasagı Kaldırıldı!]\r\n$description[**Banı Kaldırılan Kişi:** `$username`\r\n\r\n**Saat:** `$sum[$hour;3]:$minute`]\r\n$footer[KEON Development]\r\n$color[ff25]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Gold Üye ": {
+                "isim": "Gold Üye ",
+                "id": "rPxQ9K48jzlB4RPVr9uk",
+                "desc": "BDFD gold Üye sistemi",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "**Variable**\r\ngold = 0\r\n\r\npc = 0",
+                "komutlar_code": "**Promo Oluştur**\r\n```diff\r\n$nomention\r\n$onlyForIDs[KENDİ ID'niz; Sahibim değilsin]\r\n$argsCheck[>1;Yapmak istediğin promosyon kodu nedir?]\r\n$channelSendMessage[$channelID;Promo Kodunu oluşturdum DM Kutunu\r\nedermisin.]\r\n$title[Promosyon Kodunu Oluşturdum]\r\n$description[Tek Kullanımlık Promosyon Kodu: **$message**]\r\n$deletecommand\r\n$dm[KENDİ ID'niz]\r\n$setVar[pc;$message]```\r\n\r\n**Promo Kullan**\r\n```diff\r\n$nomention\r\n$onlyIf[$message==$getVar[pc]; Promosyon kodu yanlış veya kullanılmış.]\r\n$onlyIf[$getUserVar[gold]!=evet; Komutunu Kullanamadım çünkü zaten gold üyesin!]\r\n$title[Promosyon Kodu Kullandın] $description[Artık Gold Üyesin]\r\n$footer[Kullanan $username]\r\n$deletecommand\r\n$setVar[pc;]\r\n$setUserVar[gold;evet]```",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Gelişmiş Ban": {
+                "isim": "Gelişmiş Ban",
+                "id": "vGsUy7Bxszt1FG0rXOIo",
+                "desc": "BDFD gelişmiş ban komutu",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n\r\n$onlyBotPerms[admin;**Bu komut için** Yönetici **iznine sahip olmalıyım**]\r\n$onlyPerms[ban;**Bu komut için** Yönetici **iznine sahip olmalısın**]\r\n\r\n$onlyIf[$findUser[$message[1];no]!=;**Kullanıcı Bulunamadı**]\r\n$onlyIf[$findUser[$message[1];no]!=$authorID;**Bu komutu kendi üzerinde kullanamazsın**]\r\n\r\n$banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]\r\n\r\n$author[Yasaklama İşlemi Başarılı]\r\n$description[\r\n**Yasaklanan Kullanıcı**\r\n$username[$findUser[$message[1];no]]#$discriminator[$findUser[$message[1];no]]\r\n\r\nID → $replaceText[$message;$findUser[$message[1];no];;1]\r\n\r\n**Yasaklayan Yetkili**\r\n$username#$discriminator[$authorID]\r\n\r\nID → $authorID\r\n\r\n**Yasaklama Sebebi**\r\n$replaceText[$message;$message[1];;1]\r\n\r\n]\r\n$addTimestamp\r\n\r\n$thumbnail[$userAvatar[$findUser[$message[1];no]]] \r\n\r\n$supprestErrors[**Üye üzerinde işlem yapamıyorum**]  \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Şifre Oluştur ": {
+                "isim": "Şifre Oluştur ",
+                "id": "stchUjJogblpPDErbS7m",
+                "desc": "BDFD şifre Oluştur komutu",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok ",
+                "komutlar_code": "{prefix}şifre-oluştur\r\n$nomention\r\nŞifren: ||$randomString[$message[1]]||\r\n\r\n$argsCheck[>1; <@$authorID>, şifrenin kaç karakterden oluşacağını yazmalısın.]\r\n\r\n$onlyIf[$message[1]<11; <@$authorID>, şifre 11'den büyük olamaz.]\r\n$onlyIf[$message[1]>2; <@$authorID>, şifre 3'den küçük olamaz.] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Gif yazı": {
+                "isim": "Gif yazı",
+                "id": "hVs4ZJOKXVVsitkfwukA",
+                "desc": "BDFD gif yazı komutu",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "**(prefix)gif-yazı**\r\n\r\n$title[Gif Yazınız]\r\n$image[https://abcdef-text-api.herokuapp.com/type/$noMentionMessage.gif]\r\n$color[$random[0;9]$randomString[3]$random[0;20]]",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Gelişmiş Tag": {
+                "isim": "Gelişmiş Tag",
+                "id": "6GRnnsBpaQZEO9lK37nP",
+                "desc": "BDFD gelişmiş Tag sistemi.",
+                "modules": [
+                    " BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Gerekli Değişkenler\r\n```\r\ntag =\r\ntaglog =  \r\n```",
+                "komutlar_code": "{prefix}tag ayarla\r\n```\r\n$nomention\r\n$color[$random[0;99999]]\r\n$author[Tag Ayarlandı]\r\n$authorIcon[$serverIcon]\r\n$description[\r\nTag `$message` olarak başarıyla ayarlandı. Log kanalı da <#$mentionedChannels[1]> olarak ayarlandı.]\r\n\r\n$setServerVar[tag;$message[1]]\r\n$setServerVar[taglog;\r\n$mentionedChannels[1]]\r\n\r\n$argsCheck[>2; <@$authorID>, bir kanal etiketlemelisin ve bir tag belirtmelisin.]  \r\n\r\n$onlyAdmin[<@$authorID>, bu komutu sadece `Yönetici` iznine sahip olan kullanıcılar kullanabilir.] \r\n```\r\n\r\n\r\n{prefix}tag sıfırla\r\n```\r\n$nomention\r\n$color[$random[0;99999]]\r\n$author[Tag Sistemi Sıfırlandı]\r\n$authorIcon[$serverIcon]\r\n$description[\r\nTag sistemi başarıyla sıfırlandı.]\r\n\r\n$onlyAdmin[<@$authorID>, bu komutu sadece `Yönetici` iznine sahip olan kullanıcılar kullanabilir.]\r\n\r\n$suppressErrors\r\n\r\n$resetServerVar[tag]\r\n$resetServerVar[taglog] \r\n```\r\n\r\n$onJoined[$getServerVar[taglog]]\r\n```\r\n$nomention\r\n$changeUsernameWithID[$authorID;$getServerVar[tag] $username]\r\n\r\n$color[$random[0;99999]]\r\n$author[Tag Verildi]\r\n$authorIcon[$serverIcon]\r\n$description[<@$authorID> adlı kullanıcı sunucuya katıldı ve `$getServerVar[tag]` tagı verildi.] \r\n```",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Dm mesaj ": {
+                "isim": "Dm mesaj ",
+                "id": "VK6ttuOcnPhcWDq0gZAQ",
+                "desc": "BDFD DM mesaj gönderme komutu ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Yok",
+                "komutlar_code": "{prefix}dm\r\n```\r\n$nomention\r\n$dm[$mentioned[1]]\r\n$noMentionMessage\r\n\r\n$argsCheck[>2; <@$authorID>, mesajı göndereceğin kişiyi etiketlemelisin ve bir mesaj yazmalısın.] \r\n```",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "Afk Sistemi": {
+                "isim": "Afk Sistemi",
+                "id": "whjXyPL5XNxrtZKbbqsk",
+                "desc": "BDFD Afk Komutu ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/2ed0f2960a11f535c1b4cfa70ca2d8dc.png",
+                "main_code": "Değişkenler \r\nafk=\r\nafks=",
+                "komutlar_code": "**AFK**\r\n```\r\n$nomention\r\n\r\n$nomention\r\n\r\n$onlyIf[$noMentionMessage!=;Bir sebep belirtmelisin.]\r\n\r\n$author[Afk Sistemi]\r\n$description[$username, **$noMentionMessage** sebebinden AFK moda geçti.]\r\n$footer[AFK moddan çıkmak için `b!un-afk`]\r\n$footerIcon[$authorAvatar]\r\n$thumbnail[$serverIcon]\r\n\r\n$setVar[afks;$noMentionMessage;$authorID]\r\n$setVar[afk;yes;$authorID]  \r\n```\r\n\r\n**UNAFK**\r\n```\r\n$nomention\r\n\r\n$nomention\r\n\r\n$onlyIf[$message==;]\r\n\r\n$author[Afk Sistemi]\r\n$description[AFK moddan çıktın.]\r\n\r\n$setVar[afk;no;$authorID]\r\n$setVar[afks;AFK Değil;$authorID]```\r\n\r\nTetikleyici: <@\r\n```\r\n$nomention\r\n\r\n$nomention\r\n\r\n$if[$getVar[afk;$authorID]==yes]\r\n$author[AFK Sistemi]\r\n$description[$username[$mentioned[1]] kişisi **$getVar[afks;$authorID]** sebebinden AFK modda.]\r\n$else\r\n$endif  ```",
+                "kod_rank": "bdfd",
+                "k_adi": "</>",
+                "date": "1/31/2023"
+            },
+            "RESİMLİ UPTİME KOMUTU": {
+                "isim": "RESİMLİ UPTİME KOMUTU",
+                "id": "xviRJEhDNp2m3ArcIiW6",
+                "desc": " AKTİF KALMA SÜRESİNİ RESİMLİ BİR ŞEKİLDE ATAR ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/945efaa5f11098a973e2bf10fbf52d5d.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$color[66FF00]\r\n$author[Uptime]\r\n$authorIcon[$authorAvatar]\r\n$description[\r\n$image[https://falsiskremlin.sirv.com/resim_2020-11-28_113400.png?text.0.text=$uptime&text.0.position.x=-20%25&text.0.position.y=-30%25&text.0.size=50&text.0.color=f5a407&watermark.0.image=%2FImages%2Fresim_2020-11-29_103837.png&watermark.0.position.x=-35%25&watermark.0.scale.width=170&watermark.0.scale.height=170]]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/3/2023"
+            },
+            "Slash Ban": {
+                "isim": "Slash Ban",
+                "id": "7FzvPz18ji0PuonD5ebN",
+                "desc": "SLASH İLE KİŞİYE BAN ATAR",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/945efaa5f11098a973e2bf10fbf52d5d.png",
+                "main_code": "Slash Nasıl Ayyarlanacak Burda Resmi :\r\n\r\n\r\nhttps://media.discordapp.net/attachments/1058651008676401152/1058651331298086963/IMG_20221231_103943.png",
+                "komutlar_code": "$nomention\r\n$onlyPerms[ban;Bu Komutu Kullanabilmek İçin `Üyeleri Yasakla` Yetkin Olması Gerekiyor.]\r\n$onlyBotPerms[ban;Bu Komutu Kullanabilmek İçin İlk Önce Benim `Üyeleri Yasakla` Yetkim Olması Gerekiyor.]\r\n$banID[$username#$discriminator[$authorID] tarafından $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$day;01;1;-1];02;2;-1];03;3;-1];04;4;-1];05;5;-1];06;6;-1];07;7;-1];08;8;-1];09;9;-1] $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$month;January;Ocak;-1];February; Şubat;-1];March;Mart;-1];April;Nisan;-1];May;Mayıs;-1];June;Haziran;-1];July;Temmuz;-1];August;Ağustos;-1];September;Eylül;-1];October;Ekim;-1];November; Kasım;-1];December; Aralık;-1] $year $sum[3;$hour]:$minute tarihinde yasaklandı.;$message[user;kişi]]\r\n$author[$username#$discriminator[$authorID]]\r\n$authorIcon[$authorAvatar]\r\n$description[\r\n<@$message[user;kişi]> sunucudan yasaklandı. \r\n]\r\n$color[FFFF2]\r\n$addTimestamp\r\n$suppressErrors[Hatalı Kullanım]",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/3/2023"
+            },
+            "Economy command": {
+                "isim": "Economy command",
+                "id": "T5DZDdVCmwCb2jwjxDHO",
+                "desc": "Bahisli Zar Komutu",
+                "modules": [
+                    "değişken param = 0"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/924049205272649799/a_bad151ccb75637701bf80034c9387040.png",
+                "main_code": "yok",
+                "komutlar_code": "\r\n$nomention\r\n$var[sayı;$random[1;7]]\r\n$var[tahmin;$message[2]]\r\n$var[bahis;$message[1]]\r\n$onlyIf[$isNumber[$message[2]]!=false;Tahmin Sayı Olmalıdır.]\r\n$onlyIf[$isNumber[$message[1]]!=false;Bahis Sayı Olmalıdır.]\r\n$embedSuppressErrors[Bir Hata Oluştu;> **Lütfen zar {bahis} {miktar} giriniz**;EE00FF; ;Hata;$authorAvatar]\r\n$onlyIf[$checkContains[$message;$]!=true;> **Mesajında eksi olamaz ki**]\r\n$argsCheck[>2;Tahminini Yazmadın `zar {bahis} {tahmin}` ]\r\n$onlyIf[$message[1]>1;> Girdiğin Değer 1 Üstü Olmalıdır]\r\nZarlar Atıldı Tahminin = $var[tahmin]\r\nbahis = $var[bahis]\r\n$if[$var[tahmin]==$var[sayı]]\r\n$onlyIf[$isNumber[$message[1]]!=;> **Lütfen para belirtiniz.**]\r\n$onlyIf[$checkContains[$message;$]!=true;> **Mesajında eksi olamaz ki**]\r\n$onlyIf[$message[1]!=;> **Lütfen miktar yazınız.**]\r\n$onlyIf[$getVar[param;$authorID]>=$message[1];> **Paran yetersiz**]\r\n$onlyIf[50001>$message[1];> **Zar'a sadece 50.000K yatırabilirsin**]\r\n$onlyIf[$message[2]!=;Lütfen Bahis Ve tahmininizi `zar bahis tahmin` Yazın]\r\n$onlyIf[$message[2]>=1;Lütfen 1 ve 6 Arası Bir Tahmin Yazın]\r\n$onlyIf[$message[2]<=6;Lütfen 1 ve 6 Arası Bir Tahmin Yazın]\r\n$editIn[3s;Zarlar Atıldı Tahminin = $var[tahmin]\r\nbahis = $var[bahis]\r\nGelen zar $var[sayı] Kazandın]\r\n$var[kazanç;$calculate[$var[bahis]*6]]\r\n$setVar[param;$calculate[$getVar[param;$authorID]+$var[kazanç]];$authorID]\r\n$endif\r\n$if[$var[tahmin]!=$var[sayı]]\r\n$onlyIf[$isNumber[$message[1]]!=;> **Lütfen para belirtiniz.**]\r\n$onlyIf[$checkContains[$message;$]!=true;> **Mesajında eksi olamaz ki**]\r\n$onlyIf[$message[1]!=;> **Lütfen miktar yazınız.**]\r\n$onlyIf[$getVar[param;$authorID]>=$message[1];> **Paran yetersiz**]\r\n$onlyIf[50001>$message[1];> **Zar'a sadece 50.000K yatırabilirsin**]\r\n$onlyIf[$message[2]!=;Lütfen Bahis Ve tahmininizi `zar bahis tahmin` Yazın]\r\n$onlyIf[$message[2]>=1;Lütfen 1 ve 6 Arası Bir Tahmin Yazın]\r\n$onlyIf[$message[2]<=6;Lütfen 1 ve 6 Arası Bir Tahmin Yazın]\r\n$editIn[3s;Zarlar Atıldı Tahminin = $var[tahmin]\r\nbahis = $var[bahis]\r\nGelen zar $var[sayı] Kaybettin]\r\n$setVar[param;$calculate[$getVar[param;$authorID]-$var[bahis]];$authorID]\r\n$endif",
+                "kod_rank": "bdfd",
+                "k_adi": "Ertugrul",
+                "date": "2/3/2023"
+            },
+            "Bdfd": {
+                "isim": "Bdfd",
+                "id": "cwKtbVpXF41BN7H71FfR",
+                "desc": "Eğlence kodu",
+                "modules": [
+                    "(prefix)korkut"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/1012369640342704188/a_9e4712b73d671553d656f2384b34cf36.png",
+                "main_code": "Yok",
+                "komutlar_code": "{prefix} korkut\r\n$nomention\r\n$deletecommand\r\n$argsCheck[>1;❌ - **Doğru kullanım** `(prefix)korkut @Kullanıcı`]\r\n$dm[$mentioned[<]]\r\n$globalCooldown[1h;👻 - **$randomText[Yeterince korkutmadın mı? %time% Sonra Tekrar Dene;Biraz bekle, yüreğine indireceksin! %time% Sonra Tekrar Dene]**]\r\n$description[Böö!]\r\n$footer[Birisi seni korkuttu ama kim? shhh ben biliyorum ama kimseye söyleme ($username)]\r\n$image[$randomText[https://images-ext-1.discordapp.net/external/blPZf_uWrYMmcZq8A49szC2PAKpYv9eA1OSSLdVqZUI/https/img-s2.onedio.com/id-535c216930353c21353c973d/rev-2/raw/s-5e8032a2ef2f0d3c089bb104ee535c4928c77398.gif;https://images-ext-1.discordapp.net/external/lF4l6fa5r3uOkHp3IyiCdSq_yOx2XIl6KLi0OnZD9lg/https/img-s2.onedio.com/id-535c221b2e6135d962c6147b/rev-1/raw/s-4c7cfa9c9998fc2a21d2f80132ee72a458d98c89.gif?width=400&height=202;https://images-ext-1.discordapp.net/external/YODBPgQd_UD1UAB2pvWO4Q_pC7OS8Un41HXy3PXE32w/https/img-s1.onedio.com/id-535c21e3af621d1f3522412a/rev-1/raw/s-9dd9aba4a1fcf9f2b8661f98dc7f863f161db300.gif?width=400&height=171;https://images-ext-1.discordapp.net/external/GLZNwiFbD_e2_PCIJUomn7Te0ui9wP_qnWjGlZs-Ga4/https/img-s1.onedio.com/id-535c22332e6135d962c6147e/rev-1/raw/s-dfaa40a8a8cc28326a5ee643f1cb6747fc2f50dc.gif?width=400&height=224;https://images-ext-1.discordapp.net/external/WBCsxgJMOghw6cX3WuAsSTQcKP1I1mAuUcpbIlXg_Hs/https/img-s1.onedio.com/id-535c214b0b7c691935feb32a/rev-2/raw/s-2ce917c11ab43ea323e5c47887815e7fd1ef368e.gif?width=336&height=300;https://images-ext-2.discordapp.net/external/b6eN6Ja7nqUi34b0OKcEcCd1DLX52lh06_-7kuBdIPw/https/img-s2.onedio.com/id-535c21bfae78e3d36226e2e9/rev-2/raw/s-e12e23c79a87f505b1ed09b1f4bc093dabc4e35e.gif?width=323&height=300;https://images-ext-2.discordapp.net/external/r2AEa_BlrC3tmOR0GTdIksZeMded-oWztQSFc7v0e_o/https/img-s2.onedio.com/id-535c2158a8fbd26c35fcdb99/rev-1/raw/s-e31ee62698980585286d03d6ed6dd2ab06735169.gif]]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "Enemy Of The Wicked",
+                "date": "2/3/2023"
+            },
+            "Kanal Aç/Kanal Kilitle": {
+                "isim": "Kanal Aç/Kanal Kilitle",
+                "id": "exVSqK7c1itX0NcMlILW",
+                "desc": "KANALI KİLİRLER YADA AÇARSINIZ ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "**Kanal Kilit**\r\n$nomention\r\n$onlyPerms[managechannels;Yetkin Yetersiz]\r\n$modifyChannelPerms[$channelID;-sendmessages;$guildID]\r\n$title[Kanal Kilitlendi]\r\n$color[00FF00]\r\n$description[$username Tarafından Kanal Kilitlendi.]\r\n\r\n**Kanal Kilit Aç**\r\n$nomention\r\n$onlyPerms[managechannels;Yetkin Yok ]\r\n$modifyChannelPerms[$channelID;+sendmessages;$guildID]\r\n$title[Kanal Açıldı]\r\n$color[00FF00]\r\n$description[ $username Tarafından Kanal Açıldı.]",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/4/2023"
+            },
+            "Sahtemesaj": {
+                "isim": "Sahtemesaj",
+                "id": "Lob4frJ4nZjr87FjNkPh",
+                "desc": "İstediğiniz Kişiye Sahte Mesaj Yazdırırsınız",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "(prefix)sahtemesaj\r\n$nomention \r\n$onlyIf[$mentioned[1]!=;**<@$authorID>, bir kullanıcı etiketle!**]\r\n$onlyIf[$noMentionMessage!=;**<@$authorID>, sahte mesaj gir!**]\r\n$var[sm;$webhookCreate[$channelID;$username[$mentioned[1]]]] \r\n$webhookContent[$var[sm];$noMentionMessage] \r\n$webhookAvatarURL[$var[sm];$userAvatar[$mentioned[1]]] \r\n$deletecommand \r\n$async[1] \r\n$replyIn[3s] \r\n$webhookDelete[$var[sm]] \r\n$endasync   ",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/4/2023"
+            },
+            "YAPAY ZEKA": {
+                "isim": "YAPAY ZEKA",
+                "id": "kfLpRUecfs9ajFHbtOqO",
+                "desc": "TETİKLEYİCİYE BOTUNUZ NE YAZILIRSA KONUŞMASI LAZIMSA ONUN YAZIN ",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$argsCheck[>1;$randomText[Bana Bir Soru Sor!;Efendim; Nasılsın?;Naber]]\r\n$botTyping\r\n$httpGet[https://api.codare.fun/sorv2/$authorID?soru=$message]\r\n$reply\r\n$httpResult[cevap] \r\n$suppressErrors[https://c.tenor.com/sd8m8v19-QMAAAAM/cant-sleep-i-cant.gif]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/4/2023"
+            },
+            "PİNG": {
+                "isim": "PİNG",
+                "id": "kAr8qBB8aETqY1HLnC5o",
+                "desc": "BASİT BİR PİNG KOMUTU",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$title[$username[$botID] | Ping]\r\n$description[\r\nPingim: $ping\r\nAna Pingim: $botNode\r\n]\r\n$footer[Textecht Development]\r\n$color[ff0000]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/4/2023"
+            },
+            "BDFD XOX OYUNU": {
+                "isim": "BDFD XOX OYUNU",
+                "id": "duuHm300ChQlW5qEfbZV",
+                "desc": "XOX OYUNU OYNARSINIZ ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "EĞER LİNK AÇILMIYORSA VPN KULLANIN! ",
+                "komutlar_code": "XOX OYUNU KOMUTU :\r\n\r\nhttps://pastebin.com/gbWijZCc",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "BDFD GELİŞMİŞ SIRALAMA": {
+                "isim": "BDFD GELİŞMİŞ SIRALAMA",
+                "id": "N1Uhm2VUwPtTP7lVnMPX",
+                "desc": "GELİŞMİŞ BİR SIRALAMA KOMUTU.",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "**Variableler**\r\npara = 0\r\n\r\n       Not : 10 Kişi Yoksa Hata Verir. ",
+                "komutlar_code": "$nomention\r\n$suppressErrors[Hata Var Sıralamanızda 10 Kişi Yoksa Hata Verir.]\r\n$author[$username#$discriminator[$botID] - Para Sıralama]\r\n$authorIcon[$userAvatar[$botID]]\r\n$color[FFFF20]\r\n$description[\r\n🥇 - $username[$getLeaderboardValue[globalUser;para;asc;1;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;1;value]]\r\n🥈 - $username[$getLeaderboardValue[globalUser;para;asc;2;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;2;value]]\r\n🥉 - $username[$getLeaderboardValue[globalUser;para;asc;3;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;3;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;4;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;4;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;5;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;5;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;6;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;6;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;7;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;7;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;8;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;8;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;9;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;9;value]]\r\n🏅 - $username[$getLeaderboardValue[globalUser;para;asc;10;id]] - $numberSeparator[$getLeaderboardValue[globalUser;para;asc;10;value]]\r\n]\r\n$footer[$username#$discriminator[$authorID] Tarafından İstendi]\r\n$footerIcon[$authorAvatar]\r\n$addTimestamp",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "BDFD WEBSİTE EKRANI": {
+                "isim": "BDFD WEBSİTE EKRANI",
+                "id": "lXSYw3LvsRDH7MreKTNX",
+                "desc": "WEBSİTE EKRANI ATAR",
+                "modules": [
+                    "Bdscript2(olmazsa diğer dillere alıp Deneyin) "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "$nomention\r\n$title[https://$message[1]]\r\n$image[https://api.apiflash.com/v1/urltoimage?access_key=$randomText[43a17cc4237840609767c73fb2003e33;37b844d9d4fb47ceaf4edba9909c284a;24f9dea9aa7b4fff9af030c3f6a5beec;ff9cdc0617c242078d66ea23ee12f8e6;b79dfe0206ca4efc98bfd2dff838d395;83ed19045a3b46babeccbdd1f6e01583;8dd3ab506b17445f904b7ed0d01aa3d2;8e508ef075554c88ad987bb67bbf9b66;0e77bad5aff24f2fb2d491fc69857140;418cb73a4846412e950c43d97f1fdedf;c8bd4eaa827f49358af3a4e233bfaa04;dd3d5a46e8c447d69a9821780d57d6af;b5e717ca03ac4dadbaaef71742f05554;c8c9c8fca5e14baea36b5073d8fa9765;b371123963164a548549fea238da5358;d18da63d44264ede95164d49dd628b53;d9783ec1672240049aec91b36d1b0f01;ecc3fe67645446738e3103ab768d01cb;2857198a6c9b45ab8cd035d35c91fd8a;110f71655b3a4acab1042cc48a3d9647]&url=https://$noMentionMessage]\r\n$color[2F3136]\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "ESPRİ KOMUTU ": {
+                "isim": "ESPRİ KOMUTU ",
+                "id": "mdgILOaKsk6wGzql4yux",
+                "desc": "BDFD ESPRİ KOMUTU EKSTRA EKLEYEBİLİRSİNİZ ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok ",
+                "komutlar_code": "$nomention\r\n$addReactions[😂;🤢]\r\n$description[$randomText[Geçenlerde izdivaç programında adam evim, arabam, param var dedi üç hatun aynı anda elektrik aldı. Adam bildiğin üçlü priz çıktı.;Saçını sarıya boyatıp kaşlarını zift karası bırakınca doğal sarışın olmuyorsun tatlım. Borussia Dortmund deplasman forması gibi oluyon.;Ben Yedigün içiyorum sen Onbeşgün iç.;Sinemada on dakika ara dedi, aradım aradım açmadı.;Röntgen Filmi çektirdik, yakında sinemalarda.;Masada hangi örtü kullanılmaz? - Bitki Örtüsü.;İnsanların seni ezmesine izin verme! Ehliyet al, sen onları ez...;İlahi Azrail ... Sen adamı öldürürsün...!;Rıdvan'ın bir büyüğü kimdi? -Rıdtwo;Elektriği Edison buldu ama parasını niye biz ödüyoruz.;Mafya babası olmak için oğlumun adını “Mafya” koydum;Zenginler et, fakirler hâyalet yerler.;Canın sıkıldıysa gevşet.;Abi sen tüp bebek misin? -- Gaz kaçırıyorsun da.;Seven unutmaz olum, eight unutur.;Dört tarafı suyla çevrili çaya ne denir? -- Adaçayı.;Terazi ile diş macunu arasındaki fark nedir? -- Biri tartar öbürü anti tartar.;Fransız ihtilali neye karşı yapılmıştır? -- Sabaha karşı.;Baraj dendi mi, akar sular durur!;Şeytan kapıyı nasıl çalar? -- Din den dön!;Yıkanan ton balığına ne denir? -- Washington.;Çalmak fiilinin gelecek zamanı nedir? Hapse girmek.;Sakla samanı, inekler aç kalsın.;Adamın biri güneşte yanmış, ay da düz.;Adamın biri kızmış istemeye gelmişler.;Ayda 5 milyon kazanma ister misin? Evet.  O zaman Ay’a git.;Funda Arar dediler ama hala daha aramadı.;Adamın kafası atmış bacakları eşek.;Uzun lafın kısası,U.L;Yağmur yağmış, kar peynir!;Dünya dönermiş ay da köfte...;Son gülen en geç anlayandır.;Bu erikson, başka erik yok.;Sen kamyonu al, leonardo da vinci.;Çalmak fiilinin gelecek zamanı nedir?--Hapse girmek. ;Iğdırın Baş Harfi I dır;Elmayı Yere Koyarsan Ne Olur? -Yer Elması; Çok Mantıklı Oynayıp Her Şutu Direk Olan Futbolcuya Ne Denir? Teknik Direktör]]\r\n$color[$random[0;9999999]]\r\n$botTyping\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/7/2023"
+            },
+            "BDFD BÖYLE BİR KOMUT YOK KOMUTU": {
+                "isim": "BDFD BÖYLE BİR KOMUT YOK KOMUTU",
+                "id": "7K9TjKqGWfHgg1ZpMevo",
+                "desc": "EĞER BOTTA OLAN KOMUTLARIN DIŞINDA BİR KOMUT YAZARSANIZ BOT HATA OLARAK SİZE MESAJ GÖNDERİR ",
+                "modules": [
+                    "BDSCRİPT"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "KODUN BAŞLIĞINA SADECE PREFİXİNİZ KOYUN YANİ PREFİXİNİX.    ! İSE SADECE.   ! KOYUNUZ YOKSA ÇALIŞMAZ ",
+                "komutlar_code": "$nomention\r\n$addCmdReactions[❌] \r\n$deleteIn[10s]\r\n$botTyping\r\n$reply \r\n$onlyIf[$checkContains[$toLowercase[$message[1]];buralara bottaki Komutları yazın prefixi olmadan Daha Fazla Eklemek İsterseniz Aralarına Noktalı Virgül Koyun  :;seçim;yardım;sunucu-bilgi;]==false;]\r\n$title[BİR SORUN VAR] \r\n$description[\r\n **BOTTA** ``$message`` **KOMUTU BULUNAMADI LÜTFEN DOĞRU YAZDIĞINIZA EMİN OLUN. **] \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/16/2023"
+            },
+            "BDFD YETKİLİ ALIM FORMLU ": {
+                "isim": "BDFD YETKİLİ ALIM FORMLU ",
+                "id": "43sp9hhXDzkhcNyQwiCD",
+                "desc": "FORMLU YETKİLİ ALIM YAPAR SUNUCUNUZA",
+                "modules": [
+                    "BDSCRİPT2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Yok",
+                "komutlar_code": "(prefix)yetkili başvuru\r\n$nomention\r\n$title[YETKİLİ BAŞVURU]\r\n$description[> __** YETKİLİ OLMAK İÇİN AŞAĞIDAKİ BUTONA BASMANIZ YETERLİDİR **__\r\n]\r\n$thumbnail[$serverIcon]\r\n$addButton[no;keon;YETKİLİ OL;primary]\r\n$color[0354D4]\r\n$footer[Keon Code Yetkili Alım Kodu] \r\n$deletecommand\r\n\r\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n$onInteraction[keon]\r\n$newModal[mdkeon;YETKİLİ BAŞVURU FORMU]\r\n$addTextInput[modalkeon1;short;İsmin Nedir ?;4;10;yes;;Enes]\r\n$addTextInput[modalkeon2;short;Yaşın Nedir ?;1;2;yes;;23]\r\n$addTextInput[modalkeon3;short;Ne Yetkilisi Olmak İstiyorsun;3;40;yes;;Abone yetkilisi]\r\n$addTextInput[modalkeon4;paragraph;Ne Zamandır Kodlama Yapıyorsun?;2;100;no;;Buraya Yaz ]\r\n\r\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n$onInteraction[mdkeon]\r\n$nomention\r\n$channelSendMessage[LOG KANAL İD GİR;\r\n------------------------------------\r\n**YETKİLİ OLMAK İSTEYEN ** :  <@$authorID>\r\n**İsmi**: $input[modalkeon1]\r\n**Yaşı** : $input[modalkeon2]\r\n**Ne Yetkilisi Olmak İstiyor** : $input[modalkeon3]\r\nNe Zamandır Kodlama Yapıyor : $input[modalkeon4]\r\n------------------------------------\r\n]\r\n$suppressErrors\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/17/2023"
+            },
+            "BDFD SİLİNEN MESAJI GÖSTEREN KOMUT": {
+                "isim": "BDFD SİLİNEN MESAJI GÖSTEREN KOMUT",
+                "id": "kpmRd1spLHgsk0eBkUGu",
+                "desc": "Eğer birisi sunucunuzda bir mesaj silerse onu gösterir",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "Eğer Olmaz İse Altyapılar Bdfd Koyduk Eğer Rolünüz Varsa Hazır Alabiirsiniz",
+                "komutlar_code": "$onMessageDelete[$getServerVar[logger]]\r\n$nomention\r\n$var[replit;https://msg.zcodeapi.repl.co]\r\n \r\n$var[msg;$messageID]\r\n$httpGet[$var[replit]/get/$var[msg]]\r\n \r\n$onlyIf[$httpResult[code]==200;] \r\n$var[author;$httpResult[details;author]]\r\n$var[channel;$httpResult[details;channel]]\r\n$var[time;$httpResult[details;time]]\r\n$var[time.;$sub[$getTimestamp;$var[time]]]\r\n$var[days;$divide[$var[time.];86400]]\r\n$var[hours;$divide[$sub[$var[time.];$multi[$var[days];86400]];3600]]\r\n$var[minutes;$divide[$sub[$var[time.];$sum[$multi[$var[days];86400];$multi[$var[hours];3600]]];60]]\r\n$var[seconds;$sub[$var[time.];$sum[$multi[$var[days];86400];$multi[$var[hours];3600];$multi[$var[minutes];60]]]]\r\n$var[guild;$httpResult[details;guild]]\r\n$var[content;$trimSpace[$cropText[$httpResult[details;content];3990;...]]]\r\n$textSplit[$var[content];()()]\r\n\r\n$author[bir mesaj silindi] \r\n$color[ff8025] \r\n$description[\r\n> **Silinen Mesaj:**\r\n> $joinSplitText[\r\n> ] \r\n> **Gönderen:**\r\n> <@$var[author]> - `[$username[$var[author]]#$discriminator[$var[author]]\\]` **[(ID - $var[author])\\](https://www.discord.com/users/$var[author])**\r\n> **Kanal:**\r\n> <#$var[channel]> - `[$channelName[$var[channel]]\\]` - **[(ID - $var[channel])\\](https://discord.com/channels/$var[guild]/$var[channel]/$var[msg])**\r\n> **Tarih | Saat:**\r\n> <t:$var[time]:F> - (<t:$var[time]:R>) - `[$trimSpace[$replaceText[$replaceText[$checkCondition[$var[days]==0];true;];false; $var[days] days]$replaceText[$replaceText[$checkCondition[$var[hours]==0];true;];false; $var[hours] hours]$replaceText[$replaceText[$checkCondition[$var[minutes]==0];true;];false; $var[minutes] minutes]$replaceText[$replaceText[$checkCondition[$var[seconds]==0];true;];false; $var[seconds] saniye] önce]\\]`\r\n]\r\n$thumbnail[$serverIcon[$var[guild]]]\r\n \r\n$optOff[$httpGet[$var[replit]/delete/$var[msg]]]\r\n \r\n \r\n$setServerVar[snipem;$joinSplitText[\r\n> ] ]\r\n$setServerVar[snipea;<@$var[author]> - `[$username[$var[author]]#$discriminator[$var[author]]\\]` [(ID - $var[author])\\](https://www.discord.com/users/$var[author])]\r\n$setServerVar[snipes;<#$var[channel]> - `[$channelName[$var[channel]]\\]` - [(ID - $var[channel])\\](https://discord.com/channels/$var[guild]/$var[channel]/$var[msg])]\r\n$setServerVar[sniped;<t:$var[time]:F> - (<t:$var[time]:R>) - `[$trimSpace[$replaceText[$replaceText[$checkCondition[$var[days]==0];true;];false; $var[days] days]$replaceText[$replaceText[$checkCondition[$var[hours]==0];true;];false; $var[hours] hours]$replaceText[$replaceText[$checkCondition[$var[minutes]==0];true;];false; $var[minutes] minutes]$replaceText[$replaceText[$checkCondition[$var[seconds]==0];true;];false; $var[seconds] seconds] ago]\\]`]\r\n\r\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n(prefix)log ayarla \r\n$nomention\r\n$setServerVar[logger;$mentionedChannels[1]]\r\n$color[#f6f6f6]\r\n$title[KANAL GÜNCELLENDİ]\r\n$description[Artık silinen mesaj olduğuna bu kanala gönderilecek <#$mentionedChannels[1]>!]\r\n$onlyPerms[managechannels; `managechannels` yetkin yok!]\r\n$argsCheck[>1; Kanal Etiketlemeyi Unuttun! ]\r\n$footer[Keon Code Silinen Mesaj Komutu]\r\n$addTimestamp\r\n\r\n\r\n------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\nA Dan Z Ye Komutlar Açıp Bunu Yapıştırın \r\n\r\n$nomention\r\n$var[replit;https://msg.zcodeapi.repl.co]\r\n \r\n$var[msg;$messageID]\r\n$httpGet[$var[replit]/get/$var[msg]]\r\n \r\n$onlyIf[$httpResult[code]==200;] \r\n$var[author;$httpResult[details;author]]\r\n$var[channel;$httpResult[details;channel]]\r\n$var[time;$httpResult[details;time]]\r\n$var[time.;$sub[$getTimestamp;$var[time]]]\r\n$var[days;$divide[$var[time.];86400]]\r\n$var[hours;$divide[$sub[$var[time.];$multi[$var[days];86400]];3600]]\r\n$var[minutes;$divide[$sub[$var[time.];$sum[$multi[$var[days];86400];$multi[$var[hours];3600]]];60]]\r\n$var[seconds;$sub[$var[time.];$sum[$multi[$var[days];86400];$multi[$var[hours];3600];$multi[$var[minutes];60]]]]\r\n$var[guild;$httpResult[details;guild]]\r\n$var[content;$trimSpace[$cropText[$httpResult[details;content];3990;...]]]\r\n$textSplit[$var[content];()()]\r\n\r\n$author[bir mesaj silindi] \r\n$color[ff8025] \r\n$description[\r\n> **Silinen Mesaj:**\r\n> $joinSplitText[\r\n> ] \r\n> **Gönderen:**\r\n> <@$var[author]> - `[$username[$var[author]]#$discriminator[$var[author]]\\]` **[(ID - $var[author])\\](https://www.discord.com/users/$var[author])**\r\n> **Kanal:**\r\n> <#$var[channel]> - `[$channelName[$var[channel]]\\]` - **[(ID - $var[channel])\\](https://discord.com/channels/$var[guild]/$var[channel]/$var[msg])**\r\n> **Tarih | Saat:**\r\n> <t:$var[time]:F> - (<t:$var[time]:R>) - `[$trimSpace[$replaceText[$replaceText[$checkCondition[$var[days]==0];true;];false; $var[days] days]$replaceText[$replaceText[$checkCondition[$var[hours]==0];true;];false; $var[hours] hours]$replaceText[$replaceText[$checkCondition[$var[minutes]==0];true;];false; $var[minutes] minutes]$replaceText[$replaceText[$checkCondition[$var[seconds]==0];true;];false; $var[seconds] saniye] önce]\\]`\r\n]\r\n$thumbnail[$serverIcon[$var[guild]]]\r\n \r\n$optOff[$httpGet[$var[replit]/delete/$var[msg]]]\r\n \r\n \r\n$setServerVar[snipem;$joinSplitText[\r\n> ] ]\r\n$setServerVar[snipea;<@$var[author]> - `[$username[$var[author]]#$discriminator[$var[author]]\\]` [(ID - $var[author])\\](https://www.discord.com/users/$var[author])]\r\n$setServerVar[snipes;<#$var[channel]> - `[$channelName[$var[channel]]\\]` - [(ID - $var[channel])\\](https://discord.com/channels/$var[guild]/$var[channel]/$var[msg])]\r\n$setServerVar[sniped;<t:$var[time]:F> - (<t:$var[time]:R>) - `[$trimSpace[$replaceText[$replaceText[$checkCondition[$var[days]==0];true;];false; $var[days] days]$replaceText[$replaceText[$checkCondition[$var[hours]==0];true;];false; $var[hours] hours]$replaceText[$replaceText[$checkCondition[$var[minutes]==0];true;];false; $var[minutes] minutes]$replaceText[$replaceText[$checkCondition[$var[seconds]==0];true;];false; $var[seconds] seconds] ago]\\]`]\r\n \r\n\r\n \r\n",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/21/2023"
+            },
+            "SİLİNEN MESAJ GÖRME VARİABLELRİ": {
+                "isim": "SİLİNEN MESAJ GÖRME VARİABLELRİ",
+                "id": "k6kOaNPlUaLlG6NczHfw",
+                "desc": "DEĞİŞKENLER ",
+                "modules": [
+                    "Yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/601e4b8f916b672813477f9aa5729a87.png",
+                "main_code": "snipem=\r\n\r\nsniped=\r\n\r\nsnipes=\r\n\r\nlogger=\r\n\r\nsnipea=",
+                "komutlar_code": "Yok",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "2/21/2023"
+            },
+            "BDFD DÜELLO KOMUTU": {
+                "isim": "BDFD DÜELLO KOMUTU",
+                "id": "e8D1N63IqGkDbaTS2oBM",
+                "desc": "ARKADAŞINIZLA DÜELLO YAPARSINIZ",
+                "modules": [
+                    "Bdscript2"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/996468840877797408/dbfe35fec0495faf0b2a4827d6651acf.png",
+                "main_code": "Prefix[düello] \r\n\r\n---------------------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n$nomention\r\n$nomention\r\n$if[$findUser[$message]==$botID]\r\nbenimle dövüşemezsin\r\n$elseif[$isBot[$findUser[$message]]==true]\r\nBotlarla savaşamazsın\r\n$elseif[$and[$findUser[$message;no]==;$message!=]==true]\r\n“$message” isimli bir kullanıcı bulamadım.\r\n$elseif[$findUser[$message;no]==]\r\nkiminle dövüşmek istersin\r\n$elseif[$authorID==$findUser[$message]]\r\nkendinle savaşamazsın\r\n$else\r\n$description[**$username**\r\n🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥**   **`100%`\r\n\r\n**$username[$findUser[$message]]**\r\n🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥**   **`100%`\r\n\r\nBir Kavga Başladı.]\r\n$footer[Şu anda sıra $username'de]\r\n$color[ffff00]\r\n$setUserVar[fighter1;$authorID]\r\n$setUserVar[fighter2;$findUser[$message]]\r\n$setUserVar[fighter1;$authorID;$findUser[$message]]\r\n$setUserVar[fighter2;$findUser[$message];$findUser[$message]]\r\n$setUserVar[health;100]\r\n$setUserVar[health;100;$findUser[$message]]\r\n$addButton[no;punch-$authorID;Yumruk;success]\r\n$addButton[no;kick-$authorID;Atmak;success]\r\n$addButton[no;runaway-$authorID-$findUser[$message];Kaçmak;danger]\r\n$endif\r\n",
+                "komutlar_code": "$onInteraction\r\n\r\n----------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n$nomention\r\n$nomention\r\n$if[$customID==punch-$authorID]\r\n$nomention\r\n$enableDecimals[yes]\r\n$async[user]\r\n$if[$getUserVar[fighter1]==$authorID]\r\n1\r\n$else\r\n2\r\n$endif\r\n$endasync\r\n$async[opponent]\r\n$if[$getUserVar[fighter1]==$authorID]\r\n2\r\n$else\r\n1 \r\n$endif\r\n$endasync\r\n$setUserVar[health;$sub[$getUserVar[health;$getUserVar[fighter$trimSpace[$await[opponent]]]];5];$getUserVar[fighter$trimSpace[$await[opponent]]]]\r\n$if[$getUserVar[health;$getUserVar[fighter$trimSpace[$await[opponent]]]]<=0]\r\n$if[$trimSpace[$await[opponent]]==1]\r\n$description[$username[$getUserVar[fighter1]]\r\n$repeatMessage[10;⬛️]**   **`0%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter2]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter2]];0]%`\r\n\r\n$username[$getUserVar[fighter$trimSpace[$await[opponent]]]] $randomText[yıkıldı;yok edildi;yok edildi;yıkıldı;parçalandı]!]\r\n$editButton[punch-$getUserVar[fighter1];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter1];Tekme atmak;success;yes]\r\n$editButton[punch-$getUserVar[fighter2];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter2];Tekme Atmak;success;yes]\r\n$editButton[runaway-$getUserVar[fighter1]-$getUserVar[fighter2];Kaçmak;danger;yes]\r\n$else\r\n$description[$username[$getUserVar[fighter1]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter1]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter1]];0]%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$repeatMessage[10;⬛️]**   **`0%`\r\n\r\n$username[$getUserVar[fighter$trimSpace[$await[opponent]]]], $randomText[yıkıldı;yok edildi;yok edildi;yıkıldı;parçalandı]!]\r\n$editButton[punch-$getUserVar[fighter1];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter1];Teklme Atmak;success;yes]\r\n$editButton[punch-$getUserVar[fighter2];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter2];Tekme Atmak;success;yes]\r\n$editButton[runaway-$getUserVar[fighter1]-$getUserVar[fighter2];Run Away;danger;yes]\r\n$endif\r\n$footer[$username Kazandı:]\r\n$color[ffff00]\r\n$else\r\n$description[$username[$getUserVar[fighter1]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter1]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter1]];0]%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter2]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter2]];0]%`\r\n\r\n$username $username[$getUserVar[fighter$trimSpace[$await[opponent]]]]'i yumrukladı ve 5 hasar verdi]\r\n$footer[Şu anda $username[$getUserVar[fighter$trimSpace[$await[opponent]]]]'in sırası]\r\n$color[ffff00]\r\n$removeButtons\r\n$addButton[no;punch-$getUserVar[fighter$trimSpace[$await[opponent]]];Yumruk;success]\r\n$addButton[no;kick-$getUserVar[fighter$trimSpace[$await[opponent]]];Tekme At;success]\r\n$addButton[no;runaway-$authorID-$findUser[$message];Kaçmak;danger]\r\n$endif\r\n$elseif[$customID==kick-$authorID]\r\n$enableDecimals[yes]\r\n$nomention\r\n$async[user]\r\n$if[$getUserVar[fighter1]==$authorID]\r\n1\r\n$else\r\n2\r\n$endif\r\n$endasync\r\n$async[opponent]\r\n$if[$getUserVar[fighter1]==$authorID]\r\n2\r\n$else\r\n1\r\n$endif\r\n$endasync\r\n$if[$random[1;5]==1]\r\n$setUserVar[health;$sub[$getUserVar[health;$getUserVar[fighter$trimSpace[$await[user]]]];$random[3;26]];$getUserVar[fighter$trimSpace[$await[user]]]]\r\n$var[message;$username, $username[$getUserVar[fighter$trimSpace[$await[opponent]]]]'i tekmeledi ama düştü! $username bu süreçte $round[$random[3;26]] ​​hasar aldı]\r\n$else\r\n$setUserVar[health;$sub[$getUserVar[health;$getUserVar[fighter$trimSpace[$await[opponent]]]];$random[3;41]];$getUserVar[fighter$trimSpace[$await[opponent]]]]\r\n$var[message;$username, $username[$getUserVar[fighter$trimSpace[$await[opponent]]]]'i tekmeledi ve $round[$random[3;41]] hasar verdi]\r\n$endif\r\n$if[$getUserVar[health;$getUserVar[fighter$trimSpace[$await[opponent]]]]<=0]\r\n$if[$trimSpace[$await[opponent]]==1]\r\n$description[$username[$getUserVar[fighter1]]\r\n$repeatMessage[10;⬛️]**   **`0%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter2]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter2]];0]%`\r\n\r\n$username[$getUserVar[fighter$trimSpace[$await[opponent]]]] $randomText[yıkıldı;yok edildi;yok edildi;yıkıldı;parçalandı]!]\r\n$editButton[punch-$getUserVar[fighter1];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter1];Tekme At;success;yes]\r\n$editButton[punch-$getUserVar[fighter2];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter2];Tekme At;success;yes]\r\n$editButton[runaway-$getUserVar[fighter1]-$getUserVar[fighter2];Kaçmak;danger;yes]\r\n$else\r\n$description[$username[$getUserVar[fighter1]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter1]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter1]];0]%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$repeatMessage[10;⬛️]**   **`0%`\r\n\r\n$username[$getUserVar[fighter$trimSpace[$await[opponent]]]] $randomText[yıkıldı;yok edildi;yok edildi;yıkıldı;parçalandı]!]\r\n$editButton[punch-$getUserVar[fighter1];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter1];Tekme At;success;yes]\r\n$editButton[punch-$getUserVar[fighter2];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter2];Tekme At;success;yes]\r\n$editButton[runaway-$getUserVar[fighter1]-$getUserVar[fighter2];Kaçmak;danger;yes]\r\n$endif\r\n$footer[$username won]\r\n$color[ffff00]\r\n$else\r\n$description[$username[$getUserVar[fighter1]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter1]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter1]];0]%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter2]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter2]];0]%`\r\n\r\n$var[message]]\r\n$footer[Şu anda $username[$getUserVar[fighter$trimSpace[$await[opponent]]]]'in sırası]\r\n$color[ffff00]\r\n$removeButtons\r\n$addButton[no;punch-$getUserVar[fighter$trimSpace[$await[opponent]]];Yumruk;success]\r\n$addButton[no;kick-$getUserVar[fighter$trimSpace[$await[opponent]]];Tekme At;success]\r\n$addButton[no;runaway-$authorID-$findUser[$message];Kaçmak;danger]\r\n$endif\r\n$elseif[$and[$checkContains[$customID;runaway]==true;$checkContains[$customID;$authorID]==true]==true]\r\n$nomention\r\n$description[$username[$getUserVar[fighter1]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter1]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter1]];0]%`\r\n\r\n$username[$getUserVar[fighter2]]\r\n$replaceText[$repeatMessage[10;⬛️];⬛️;🟥;$round[$divide[$getUserVar[health;$getUserVar[fighter2]];10]]]**   **`$round[$getUserVar[health;$getUserVar[fighter2]];0]%`\r\n\r\n$username kaçtı!]\r\n$footer[Ne salak]\r\n$color[ffff00]\r\n$editButton[punch-$getUserVar[fighter1];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter1];Tekme At;success;yes]\r\n$editButton[punch-$getUserVar[fighter2];Yumruk;success;yes]\r\n$editButton[kick-$getUserVar[fighter2];Tekme At;success;yes]\r\n$editButton[$customID;Kaçmak;danger;yes]\r\n$elseif[$checkContains[$customID;runaway;punch;kick]==true]\r\n$nomention\r\n$ephemeral\r\n$removeButtons\r\nSıra Sende Değil! \r\n$endif",
+                "kod_rank": "bdfd",
+                "k_adi": "EnesK",
+                "date": "3/11/2023"
+            }
+        }
+    }
+]
