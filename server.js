@@ -241,14 +241,38 @@ app.get("/bdfd/:id", (req, res) => {
 });
 //Bdfd son
 
-// Secret Kategorisi
+// Secret Kategorisi Ana Sayfa
 app.get("/secret", (req, res) => {
   if (
-    !req.user ||
-    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) ||
-    client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.boosterRolü) || // Boost rolü olanlar engellenir
-    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü) // Secret role sahip değilse engellenir
+    !req.user || // Kullanıcı giriş yapmamışsa
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) // Sunucuda değilse
   ) {
+    return res.redirect(
+      url.format({
+        pathname: "/hata",
+        query: {
+          statuscode: 137,
+          message: "To view this category, you must first join our Discord server and log in to the site."
+        }
+      })
+    );
+  }
+
+  let guild = client.guilds.cache.get(IDler.sunucuID);
+  let member = guild.members.cache.get(req.user.id);
+
+  // Eğer kullanıcı Secret rolüne sahipse erişim izni verilir (Boost olsa bile)
+  if (member.roles.cache.has(IDler.secretRolü)) {
+    var data = db.secret.get("kodlar");
+    data = sortData(data);
+    return res.render("secret", {
+      user: req.user,
+      kodlar: data
+    });
+  }
+
+  // Secret rolü yoksa ve Boost rolü varsa erişim engellenir
+  if (member.roles.cache.has(IDler.boosterRolü)) {
     return res.redirect(
       url.format({
         pathname: "/hata",
@@ -260,21 +284,56 @@ app.get("/secret", (req, res) => {
     );
   }
 
-  var data = db.secret.get("kodlar");
-  data = sortData(data);
-  res.render("secret", {
-    user: req.user,
-    kodlar: data
-  });
+  // Secret rolü yoksa erişim engellenir
+  return res.redirect(
+    url.format({
+      pathname: "/hata",
+      query: {
+        statuscode: 501,
+        message: "You do not have permission to view this page."
+      }
+    })
+  );
 });
 
+// Secret Kategorisi ID Bazlı Sayfa
 app.get("/secret/:id", (req, res) => {
   if (
-    !req.user ||
-    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) ||
-    client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.boosterRolü) || // Boost rolü olanlar engellenir
-    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü) // Secret role sahip değilse engellenir
+    !req.user || // Kullanıcı giriş yapmamışsa
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) // Sunucuda değilse
   ) {
+    return res.redirect(
+      url.format({
+        pathname: "/hata",
+        query: {
+          statuscode: 137,
+          message: "To view this category, you must first join our Discord server and log in to the site."
+        }
+      })
+    );
+  }
+
+  let guild = client.guilds.cache.get(IDler.sunucuID);
+  let member = guild.members.cache.get(req.user.id);
+
+  // Eğer kullanıcı Secret rolüne sahipse erişim izni verilir (Boost olsa bile)
+  if (member.roles.cache.has(IDler.secretRolü)) {
+    var id = req.params.id;
+    if (!id) req.redirect("/");
+    let data = db.secret.get("kodlar");
+    var code = findCodeToId(data, id);
+    if (code) {
+      return res.render("kod", {
+        user: req.user,
+        kod: code
+      });
+    } else {
+      return res.redirect("/");
+    }
+  }
+
+  // Secret rolü yoksa ve Boost rolü varsa erişim engellenir
+  if (member.roles.cache.has(IDler.boosterRolü)) {
     return res.redirect(
       url.format({
         pathname: "/hata",
@@ -286,18 +345,16 @@ app.get("/secret/:id", (req, res) => {
     );
   }
 
-  var id = req.params.id;
-  if (!id) req.redirect("/");
-  let data = db.secret.get("kodlar");
-  var code = findCodeToId(data, id);
-  if (code) {
-    res.render("kod", {
-      user: req.user,
-      kod: code
-    });
-  } else {
-    res.redirect("/");
-  }
+  // Secret rolü yoksa erişim engellenir
+  return res.redirect(
+    url.format({
+      pathname: "/hata",
+      query: {
+        statuscode: 501,
+        message: "You do not have permission to view this page."
+      }
+    })
+  );
 });
 
 // Public Kategorisi
