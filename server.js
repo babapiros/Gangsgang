@@ -27,21 +27,21 @@ for (let rank in ranks) {
 
 
 const IDler = {
-  botID: "1258059895450898553",
+  botID: "1118580463125147729",
   botToken: process.env.TOKEN,
   botSecret: process.env.SECRET,
-  botCallbackURL: "https://gangsgang.glitch.me/callback",
+  botCallbackURL: "https://levyscript.onrender.com/callback",
   sunucuID: "1235189205571866655",
-  sunucuDavet: "https://discord.com/invite/F8vNGp3UV9",
-  kodLogKanalı: "1235189205571866658",
+  sunucuDavet: "https://discord.gg/F8vNGp3UV9",
+  kodLogKanalı: "1329053123255472128",
   sahipRolü: "1263986203921743994",
   bdfd: "1263989195530305717",
   adminRolü: "1248029895276105729",
   kodPaylaşımcıRolü: "1264153637937221735",
   boosterRolü: "1264153860587393210",
   kodPaylaşamayacakRoller: ["1264153681708711957", "1264153681708711957"],
-  hazırAltyapılarRolü: "1263989389814661213",
-  hazırSistemlerRolü: "1263989485390270484",
+  hazırAltyapılarRolü: "1329053655424434176",
+  hazırSistemlerRolü: "1329053801969356951",
   elmasKodlarRolü: "1263991984503128126",
   altınKodlarRolü: "1263992044964282438",
   normalKodlarRolü: "1263989322697277471"};
@@ -151,7 +151,7 @@ app.get("/script/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "⚠️Maalesef Bu Katagoriyi Görmen İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️ "
+            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site. "
         }
       })
     );
@@ -195,7 +195,7 @@ app.get("/bdfd/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "⚠️Maalesef Bu Katagoriyi Görmen İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️"
+            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
         }
       })
     );
@@ -227,7 +227,7 @@ app.get("/bdfd/:id", (req, res) => {
           pathname: "/hata",
           query: {
             statuscode: 501,
-            message: "❌Bu Kodu Göremezsin Gerekli Rolün Yok❌"
+            message: "You do not have permission to view this code."
           }
         })
       );
@@ -256,7 +256,7 @@ app.get("/altin/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "⚠️Maalesef Bu Katagoriyi Görmen İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️"
+            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
         }
       })
     );
@@ -286,7 +286,7 @@ app.get("/altin/:id", (req, res) => {
           pathname: "/hata",
           query: {
             statuscode: 501,
-            message: "❌Bu Kodu Göremezsin Gerekli Rolün Yok❌"
+            message: "You do not have permission to view this code."
           }
         })
       );
@@ -314,7 +314,7 @@ app.get("/elmas/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "⚠️Maalesef Bu Katagoriyi Görmen İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️"
+            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
         }
       })
     );
@@ -344,7 +344,7 @@ app.get("/elmas/:id", (req, res) => {
           pathname: "/hata",
           query: {
             statuscode: 501,
-            message: "❌Bu Kodu Göremezsin Gerekli Rolün Yok❌"
+            message: "You do not have permission to view this code."
           }
         })
       );
@@ -372,7 +372,7 @@ app.get("/hazir/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "⚠️Maalesef Bu Katagoriyi Görmen İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️"
+            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
         }
       })
     );
@@ -402,7 +402,7 @@ app.get("/hazir/:id", (req, res) => {
           pathname: "/hata",
           query: {
             statuscode: 501,
-            message: "❌Bu Kodu Göremezsin Gerekli Rolün Yok❌"
+            message: "You do not have permission to view this code."
           }
         })
       );
@@ -431,7 +431,7 @@ app.get("/topluluk/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "⚠️Maalesef Bu Katagoriyi Görmen İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️"
+            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
         }
       })
     );
@@ -459,7 +459,7 @@ app.get("/profil/:id", (req, res) => {
         pathname: "/hata",
         query: {
           statuscode: 501,
-          message: "Böyle Birisi Yok❌"
+          message: "No such person was found."
         }
       })
     );
@@ -516,7 +516,7 @@ app.get("/sil/:rank/:id", (req, res) => {
           pathname: "/hata",
           query: {
             statuscode: 502,
-            message: "❌Bu Sayfayı Sadece Yetkililer Görebilir❌"
+            message: "Only authorized personnel can do this."
           }
         })
       );
@@ -531,7 +531,7 @@ app.get("/sil/:rank/:id", (req, res) => {
               pathname: "/hata",
               query: {
                 statuscode: 504,
-                message: "Bir Kod İd'si Belirtin"
+                message: "Please specify a code ID."
               }
             })
           );
@@ -543,7 +543,7 @@ app.get("/sil/:rank/:id", (req, res) => {
               pathname: "/hata",
               query: {
                 statuscode: 504,
-                message: "Bir kod rankı'si belirtin"
+                message: "Please specify a code rank."
               }
             })
           );
@@ -555,7 +555,7 @@ app.get("/sil/:rank/:id", (req, res) => {
               pathname: "/hata",
               query: {
                 statuscode: 504,
-                message: "❌Üzgünüm ancak böyle bir kod hiçbir zaman bulunmadı!❌"
+                message: "Such a code has never existed."
               }
             })
           );
@@ -570,7 +570,7 @@ app.get("/sil/:rank/:id", (req, res) => {
             pathname: "/hata",
             query: {
               statuscode: 502,
-              message: "❌Bu sayfayı görmek için gerekli yetkiye sahip değilsiniz❌"
+              message: "You do not have the necessary permissions to view this page."
             }
           })
         );
@@ -582,7 +582,7 @@ app.get("/sil/:rank/:id", (req, res) => {
         pathname: "/hata",
         query: {
           statuscode: 501,
-          message: "❌Bu sayfayı görmek için Siteye giriş yapmalısınız❌"
+          message: "You must log in to the site to view this page."
         }
       })
     );
@@ -633,7 +633,7 @@ app.get("/paylas", (req, res) => {
         query: {
           statuscode: 138,
           message:
-            "⚠️Maalesef Kod Paylaşmak İçin İlk Önce Discord Sunucumuza Gelmeniz ➕ Siteye Giriş Yapmanız Lazım⚠️"
+            "To share a code, you must first join our Discord server and log in to the site."
         }
       })
     );
@@ -654,7 +654,7 @@ app.post("/paylasim", (req, res) => {
         pathname: "/hata",
         query: {
           statuscode: 502,
-          message: "❌Kod Paylaşma İznin Yok❌"
+          message: "You do not have the necessary permission to share a code."
         }
       })
     );
@@ -757,4 +757,3 @@ client.on("ready", () => {
     console.log("Proje Hazır!");
   });
 });
-
