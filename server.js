@@ -20,7 +20,7 @@ const db = (global.db = {});
 
 
 
-let ranks = ["script", "altin", "elmas", "hazir", "topluluk", "api","bdfd"];
+let ranks = ["script", "altin", "elmas", "hazir", "public", "api","bdfd"];
 for (let rank in ranks) {
   db[ranks[rank]] = new bookman(ranks[rank]);
 }
