@@ -1,42 +1,67 @@
-<h1>Admin Panel</h1>
-<table border="1">
-    <thead>
-        <tr>
-            <th>Member</th>
-            <th>Roles</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each members}}
-        <tr>
-            <td>{{this.username}}</td>
-            <td>
-                {{#each this.roles}}
-                <span>{{this.name}}</span>
-                {{/each}}
-            </td>
-            <td>
-                <form action="/add-role" method="POST">
-                    <input type="hidden" name="memberId" value="{{this.id}}" />
-                    <select name="roleId">
-                        {{#each ../roles}}
-                        <option value="{{this.id}}">{{this.name}}</option>
-                        {{/each}}
-                    </select>
-                    <button type="submit">Add Role</button>
-                </form>
-                <form action="/remove-role" method="POST">
-                    <input type="hidden" name="memberId" value="{{this.id}}" />
-                    <select name="roleId">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/styles/admin.css"> <!-- Harici CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Admin Panel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Kullanıcı</th>
+                    <th>Roller</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each members}}
+                <tr>
+                    <td>{{this.username}}</td>
+                    <td>
                         {{#each this.roles}}
-                        <option value="{{this.id}}">{{this.name}}</option>
+                        <span class="badge">{{this.name}}</span>
                         {{/each}}
-                    </select>
-                    <button type="submit">Remove Role</button>
-                </form>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+                    </td>
+                    <td>
+                        <!-- Rol Ekle -->
+                        <form action="/add-role" method="POST">
+                            <input type="hidden" name="memberId" value="{{this.id}}">
+                            <select name="roleId">
+                                {{#each ../roles}}
+                                <option value="{{this.id}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                            <button class="btn btn-success" type="submit">Rol Ekle</button>
+                        </form>
+                        <!-- Rol Sil -->
+                        <form action="/remove-role" method="POST">
+                            <input type="hidden" name="memberId" value="{{this.id}}">
+                            <select name="roleId">
+                                {{#each this.roles}}
+                                <option value="{{this.id}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                            <button class="btn btn-danger" type="submit">Rol Sil</button>
+                        </form>
+                        <!-- Kullanıcıyı Kickle -->
+                        <form action="/kick-user" method="POST">
+                            <input type="hidden" name="memberId" value="{{this.id}}">
+                            <button class="btn btn-warning" type="submit">Kullanıcıyı Kickle</button>
+                        </form>
+                        <!-- Kullanıcıyı Banla -->
+                        <form action="/ban-user" method="POST">
+                            <input type="hidden" name="memberId" value="{{this.id}}">
+                            <button class="btn btn-danger" type="submit">Kullanıcıyı Banla</button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
