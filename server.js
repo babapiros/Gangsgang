@@ -242,93 +242,102 @@ app.get("/bdfd/:id", (req, res) => {
 //Bdfd son
 
 // Admin Panel Route
-app.get("/admin-panel", (req, res) => {
-    const guild = client.guilds.cache.get(IDler.sunucuID); // Sunucuyu alın
-    if (!guild) {
-        return res.status(500).send("Sunucu bulunamadı. Sunucu ID'sini kontrol edin.");
-    }
+app.get("/admin-panel", async (req, res) => {
+    try {
+        // Sunucuyu alın
+        const guild = client.guilds.cache.get("1235189205571866655"); // Sunucu ID'si direkt yazıldı
+        if (!guild) {
+            return res.status(500).send("Sunucu bulunamadı. Sunucu ID'sini kontrol edin.");
+        }
 
-    // Giriş yapan kullanıcı ID'sini alın (Tarayıcıdan test için gönderilebilir)
-    const userId = req.query.user_id;
-    const member = guild.members.cache.get(userId);
+        // Kullanıcıyı alın (Tarayıcıdan user_id parametresi ile alınacak)
+        const userId = req.query.user_id;
+        if (!userId) {
+            return res.status(400).send("Kullanıcı ID'si belirtilmemiş.");
+        }
 
-    if (!member) {
-        return res.status(403).send("Bu sunucunun bir üyesi değilsiniz.");
-    }
+        const member = await guild.members.fetch(userId); // Üyeyi Discord API'den alın
+        if (!member) {
+            return res.status(403).send("Bu sunucunun bir üyesi değilsiniz.");
+        }
 
-    // Kullanıcının sahip rolüne sahip olup olmadığını kontrol edin
-    if (!member.roles.cache.has(IDler.sahipRolü)) {
-        return res.status(403).send("Bu sayfaya erişim izniniz yok.");
-    }
+        // Kullanıcının sahip rolüne sahip olup olmadığını kontrol edin
+        if (!member.roles.cache.has("1263986203921743994")) { // Sahip Rolü ID
+            return res.status(403).send("Bu sayfaya erişim izniniz yok.");
+        }
 
-    // Sunucudaki tüm üyeleri ve rollerini alın
-    const members = guild.members.cache.map(member => ({
-        id: member.id,
-        username: member.user.username,
-        roles: member.roles.cache.map(role => ({
+        // Tüm üyeleri ve rollerini alın
+        const members = guild.members.cache.map(member => ({
+            id: member.id,
+            username: member.user.username,
+            roles: member.roles.cache.map(role => ({
+                id: role.id,
+                name: role.name
+            }))
+        }));
+
+        // Sunucudaki tüm rolleri alın
+        const roles = guild.roles.cache.map(role => ({
             id: role.id,
             name: role.name
-        }))
-    }));
+        }));
 
-    // Sunucudaki tüm rolleri alın
-    const roles = guild.roles.cache.map(role => ({
-        id: role.id,
-        name: role.name
-    }));
-
-    // Yönetim panelini render edin
-    res.render("admin-panel", { members, roles });
+        // Yönetim panelini render edin
+        res.render("admin-panel", { members, roles });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Bir hata oluştu.");
+    }
 });
 
 // Add Role API
 app.post("/add-role", async (req, res) => {
     const { memberId, roleId } = req.body;
 
-    const guild = client.guilds.cache.get(IDler.sunucuID); // Sunucuyu alın
-    if (!guild) {
-        return res.status(500).json({ success: false, message: "Sunucu bulunamadı." });
-    }
+    try {
+        const guild = client.guilds.cache.get("1235189205571866655"); // Sunucuyu alın
+        if (!guild) {
+            return res.status(500).json({ success: false, message: "Sunucu bulunamadı." });
+        }
 
-    const member = guild.members.cache.get(memberId); // Kullanıcıyı alın
-    const role = guild.roles.cache.get(roleId); // Rolü alın
+        const member = await guild.members.fetch(memberId); // Üyeyi alın
+        const role = guild.roles.cache.get(roleId); // Rolü alın
 
-    if (member && role) {
-        try {
+        if (member && role) {
             await member.roles.add(role); // Rolü ekleyin
             return res.json({ success: true, message: `Rol ${role.name}, ${member.user.username} kullanıcısına başarıyla eklendi.` });
-        } catch (error) {
-            console.error(error);
-            return res.status(500).json({ success: false, message: "Rol eklenirken bir hata oluştu." });
         }
-    }
 
-    return res.json({ success: false, message: "Kullanıcı veya rol bulunamadı." });
+        return res.json({ success: false, message: "Kullanıcı veya rol bulunamadı." });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ success: false, message: "Rol eklenirken bir hata oluştu." });
+    }
 });
 
 // Remove Role API
 app.post("/remove-role", async (req, res) => {
     const { memberId, roleId } = req.body;
 
-    const guild = client.guilds.cache.get(IDler.sunucuID); // Sunucuyu alın
-    if (!guild) {
-        return res.status(500).json({ success: false, message: "Sunucu bulunamadı." });
-    }
+    try {
+        const guild = client.guilds.cache.get("1235189205571866655"); // Sunucuyu alın
+        if (!guild) {
+            return res.status(500).json({ success: false, message: "Sunucu bulunamadı." });
+        }
 
-    const member = guild.members.cache.get(memberId); // Kullanıcıyı alın
-    const role = guild.roles.cache.get(roleId); // Rolü alın
+        const member = await guild.members.fetch(memberId); // Üyeyi alın
+        const role = guild.roles.cache.get(roleId); // Rolü alın
 
-    if (member && role) {
-        try {
+        if (member && role) {
             await member.roles.remove(role); // Rolü kaldırın
             return res.json({ success: true, message: `Rol ${role.name}, ${member.user.username} kullanıcısından başarıyla kaldırıldı.` });
-        } catch (error) {
-            console.error(error);
-            return res.status(500).json({ success: false, message: "Rol kaldırılırken bir hata oluştu." });
         }
-    }
 
-    return res.json({ success: false, message: "Kullanıcı veya rol bulunamadı." });
+        return res.json({ success: false, message: "Kullanıcı veya rol bulunamadı." });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ success: false, message: "Rol kaldırılırken bir hata oluştu." });
+    }
 });
 
 // Secret Kategorisi Ana Sayfa
