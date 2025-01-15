@@ -20,7 +20,7 @@ const db = (global.db = {});
 
 
 
-let ranks = ["script", "altin", "elmas", "public", "topluluk", "api","bdfd"];
+let ranks = ["script", "altin", "elmas", "hazir", "topluluk", "api","bdfd", "public"];
 for (let rank in ranks) {
   db[ranks[rank]] = new bookman(ranks[rank]);
 }
@@ -44,7 +44,9 @@ const IDler = {
   hazırSistemlerRolü: "1329053801969356951",
   elmasKodlarRolü: "1263991984503128126",
   altınKodlarRolü: "1263992044964282438",
-  normalKodlarRolü: "1263989322697277471"};
+  normalKodlarRolü: "1263989322697277471",
+  publicRolü: "1329053655424434176" // Public rolünün ID'si hazır altyapılar ile aynı
+};
   
 const app = express();
 
@@ -237,6 +239,68 @@ app.get("/bdfd/:id", (req, res) => {
   }
 });
 //Bdfd son
+
+// Public Kategorisi
+app.get("/public", (req, res) => {
+  var data = db.public.get("kodlar");
+  data = sortData(data);
+  res.render("public", {
+    user: req.user,
+    kodlar: data
+  });
+});
+
+app.get("/public/:id", (req, res) => {
+  if (
+    !req.user ||
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id)
+  )
+    return res.redirect(
+      url.format({
+        pathname: "/hata",
+        query: {
+          statuscode: 137,
+          message:
+            "To view this category, you must first join our Discord server and log in to the site."
+        }
+      })
+    );
+
+  var id = req.params.id;
+  if (!id) req.redirect("/");
+  let data = db.public.get("kodlar");
+  var code = findCodeToId(data, id);
+  if (code) {
+    let guild = client.guilds.cache.get(IDler.sunucuID);
+    let member = req.user ? guild.members.cache.get(req.user.id) : null;
+    if (
+      member &&
+      (member.roles.cache.has(IDler.publicRolü) ||
+        member.roles.cache.has(IDler.boosterRolü) ||
+        member.roles.cache.has(IDler.sahipRolü) ||
+        member.roles.cache.has(IDler.kodPaylaşımcıRolü) ||
+        member.roles.cache.has(IDler.adminRolü))
+    ) {
+      res.render("kod", {
+        user: req.user,
+        kod: code
+      });
+    } else {
+      res.redirect(
+        url.format({
+          pathname: "/hata",
+          query: {
+            statuscode: 501,
+            message: "You do not have permission to view this code."
+          }
+        })
+      );
+    }
+  } else {
+    res.redirect("/");
+  }
+});
+
 app.get("/altijjn", (req, res) => {
   var data = db.altin.get("kodlar");
   data = sortData(data);
@@ -353,7 +417,7 @@ app.get("/elmas/:id", (req, res) => {
     res.redirect("/");
   }
 });
-app.get("/public", (req, res) => {
+app.get("/hazir383o3", (req, res) => {
   var data = db.hazir.get("kodlar");
   data = sortData(data);
   res.render("hazir", {
@@ -361,7 +425,7 @@ app.get("/public", (req, res) => {
     kodlar: data
   });
 });
-app.get("/public/:id", (req, res) => {
+app.get("/hazir/:id", (req, res) => {
   if (
     !req.user ||
     !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id)
@@ -379,7 +443,7 @@ app.get("/public/:id", (req, res) => {
 
   var id = req.params.id;
   if (!id) req.redirect("/");
-  let data = db.public.get("kodlar");
+  let data = db.hazir.get("kodlar");
   var code = findCodeToId(data, id);
   if (code) {
     let guild = client.guilds.cache.get(IDler.sunucuID);
