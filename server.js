@@ -114,11 +114,11 @@ app.get(
     res.redirect("/");
   }
 );
-app.get("/cikis", (req, res) => {
+app.get("/logout", (req, res) => {
   req.logOut();
   return res.redirect("/");
 });
-app.get("/davet", (req, res) => {
+app.get("/invite", (req, res) => {
   res.redirect(IDler.sunucuDavet);
 });
 
@@ -411,7 +411,7 @@ app.get("/hazir/:id", (req, res) => {
     res.redirect("/");
   }
 });
-app.get("/topluluk", (req, res) => {
+app.get("/public", (req, res) => {
   var data = db.topluluk.get("kodlar");
   data = sortData(data);
   res.render("topluluk", {
@@ -420,7 +420,7 @@ app.get("/topluluk", (req, res) => {
   });
 });
 
-app.get("/topluluk/:id", (req, res) => {
+app.get("/public/:id", (req, res) => {
   if (
     !req.user ||
     !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id)
@@ -697,9 +697,9 @@ app.post("/paylasim", (req, res) => {
     .setColor("RANDOM")
     .setFooter(client.guilds.cache.get(IDler.sunucuID).name, client.guilds.cache.get(IDler.sunucuID).iconURL({ dynamic: true, size: 2048}))
     .setTimestamp()
-    .setAuthor("Sitede Bir  Kod Paylaşıldı!",client.user.avatarURL)
-    .addField("Kod Bilgileri",`**Adı:** ${obj.isim} \n**Açıklaması:** ${obj.desc} \n**Paylaşan:** <@${req.user.id}>`)
-    .addField("Kod Sayfası", `[Tıkla!](https://gangsgang.glitch.me/${obj.kod_rank}/${obj.id})`));
+    .setAuthor("A code was shared on the site!",client.user.avatarURL)
+    .addField("Code Details",`**Code Name:** ${obj.isim} \n**Desc:** ${obj.desc} \n**Sharer:** <@${req.user.id}>`)
+    .addField("Code page", `[Click!](https://levyscript.onrender.com/${obj.kod_rank}/${obj.id})`));
   res.redirect(`/${obj.kod_rank}/${obj.id}`);
   
   
