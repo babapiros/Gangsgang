@@ -242,52 +242,59 @@ app.get("/bdfd/:id", (req, res) => {
 //Bdfd son
 
 // Admin Panel Route
-app.get("/admin-panel", async (req, res) => {
-    try {
-        // Sunucuyu alın
-        const guild = client.guilds.cache.get("1235189205571866655"); // Sunucu ID'si direkt yazıldı
-        if (!guild) {
-            return res.status(500).send("Sunucu bulunamadı. Sunucu ID'sini kontrol edin.");
-        }
+app.get("/admin-panel", (req, res) => {
+    // Sunucuyu alın
+    const guild = client.guilds.cache.get("1235189205571866655"); // Sunucu ID'si
+    if (!guild) {
+        return res.status(500).send("Sunucu bulunamadı. Lütfen sunucu ID'sini kontrol edin.");
+    }
 
-        // Kullanıcıyı alın (Tarayıcıdan user_id parametresi ile alınacak)
-        const userId = req.query.user_id;
-        if (!userId) {
-            return res.status(400).send("Kullanıcı ID'si belirtilmemiş.");
-        }
+    // Kullanıcı giriş kontrolü
+    if (!req.user || !guild.members.cache.has(req.user.id)) {
+        return res.redirect(
+            url.format({
+                pathname: "/hata",
+                query: {
+                    statuscode: 137,
+                    message: "Bu sayfaya erişmek için Discord sunucusuna katılmanız ve giriş yapmanız gerekmektedir."
+                }
+            })
+        );
+    }
 
-        const member = await guild.members.fetch(userId); // Üyeyi Discord API'den alın
-        if (!member) {
-            return res.status(403).send("Bu sunucunun bir üyesi değilsiniz.");
-        }
+    const member = guild.members.cache.get(req.user.id);
 
-        // Kullanıcının sahip rolüne sahip olup olmadığını kontrol edin
-        if (!member.roles.cache.has("1263986203921743994")) { // Sahip Rolü ID
-            return res.status(403).send("Bu sayfaya erişim izniniz yok.");
-        }
+    // Kullanıcının sahip rolüne sahip olup olmadığını kontrol edin
+    if (!member.roles.cache.has("1263986203921743994")) { // Sahip Rolü ID
+        return res.redirect(
+            url.format({
+                pathname: "/hata",
+                query: {
+                    statuscode: 403,
+                    message: "Bu sayfaya erişim izniniz yok."
+                }
+            })
+        );
+    }
 
-        // Tüm üyeleri ve rollerini alın
-        const members = guild.members.cache.map(member => ({
-            id: member.id,
-            username: member.user.username,
-            roles: member.roles.cache.map(role => ({
-                id: role.id,
-                name: role.name
-            }))
-        }));
-
-        // Sunucudaki tüm rolleri alın
-        const roles = guild.roles.cache.map(role => ({
+    // Tüm üyeleri ve rollerini alın
+    const members = guild.members.cache.map(member => ({
+        id: member.id,
+        username: member.user.username,
+        roles: member.roles.cache.map(role => ({
             id: role.id,
             name: role.name
-        }));
+        }))
+    }));
 
-        // Yönetim panelini render edin
-        res.render("admin-panel", { members, roles });
-    } catch (error) {
-        console.error(error);
-        res.status(500).send("Bir hata oluştu.");
-    }
+    // Sunucudaki tüm rolleri alın
+    const roles = guild.roles.cache.map(role => ({
+        id: role.id,
+        name: role.name
+    }));
+
+    // Yönetim panelini render edin
+    res.render("admin-panel", { members, roles });
 });
 
 // Add Role API
