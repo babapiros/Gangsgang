@@ -20,7 +20,7 @@ const db = (global.db = {});
 
 
 
-let ranks = ["script", "altin", "elmas", "hazir", "topluluk", "api","bdfd"];
+let ranks = ["script", "altin", "elmas", "public", "topluluk", "api","bdfd"];
 for (let rank in ranks) {
   db[ranks[rank]] = new bookman(ranks[rank]);
 }
@@ -353,7 +353,7 @@ app.get("/elmas/:id", (req, res) => {
     res.redirect("/");
   }
 });
-app.get("/hazir383o3", (req, res) => {
+app.get("/public", (req, res) => {
   var data = db.hazir.get("kodlar");
   data = sortData(data);
   res.render("hazir", {
@@ -361,7 +361,7 @@ app.get("/hazir383o3", (req, res) => {
     kodlar: data
   });
 });
-app.get("/hazir/:id", (req, res) => {
+app.get("/public/:id", (req, res) => {
   if (
     !req.user ||
     !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id)
@@ -379,7 +379,7 @@ app.get("/hazir/:id", (req, res) => {
 
   var id = req.params.id;
   if (!id) req.redirect("/");
-  let data = db.hazir.get("kodlar");
+  let data = db.public.get("kodlar");
   var code = findCodeToId(data, id);
   if (code) {
     let guild = client.guilds.cache.get(IDler.sunucuID);
