@@ -20,7 +20,7 @@ const db = (global.db = {});
 
 
 
-let ranks = ["script", "altin", "elmas", "hazir", "topluluk", "api","bdfd", "public"];
+let ranks = ["script", "altin", "elmas", "hazir", "topluluk", "api","bdfd", "public", "secret"];
 for (let rank in ranks) {
   db[ranks[rank]] = new bookman(ranks[rank]);
 }
@@ -45,7 +45,8 @@ const IDler = {
   elmasKodlarRolü: "1263991984503128126",
   altınKodlarRolü: "1263992044964282438",
   normalKodlarRolü: "1263989322697277471",
-  publicRolü: "1329053655424434176" // Public rolünün ID'si hazır altyapılar ile aynı
+  publicRolü: "1329053655424434176", // Public rolünün ID'si hazır altyapılar ile aynı
+  secretRolü: "1263986203921743994" // Secret rolü, sahip rolü ile aynı
 };
   
 const app = express();
@@ -239,6 +240,63 @@ app.get("/bdfd/:id", (req, res) => {
   }
 });
 //Bdfd son
+
+// Secret Kategorisi
+app.get("/secret", (req, res) => {
+  if (
+    !req.user ||
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) ||
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü)
+  ) {
+    return res.redirect(
+      url.format({
+        pathname: "/hata",
+        query: {
+          statuscode: 501,
+          message: "You do not have permission to view this page."
+        }
+      })
+    );
+  }
+
+  var data = db.secret.get("kodlar");
+  data = sortData(data);
+  res.render("secret", {
+    user: req.user,
+    kodlar: data
+  });
+});
+
+app.get("/secret/:id", (req, res) => {
+  if (
+    !req.user ||
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) ||
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü)
+  ) {
+    return res.redirect(
+      url.format({
+        pathname: "/hata",
+        query: {
+          statuscode: 501,
+          message: "You do not have permission to view this page."
+        }
+      })
+    );
+  }
+
+  var id = req.params.id;
+  if (!id) req.redirect("/");
+  let data = db.secret.get("kodlar");
+  var code = findCodeToId(data, id);
+  if (code) {
+    res.render("kod", {
+      user: req.user,
+      kod: code
+    });
+  } else {
+    res.redirect("/");
+  }
+});
 
 // Public Kategorisi
 app.get("/public", (req, res) => {
