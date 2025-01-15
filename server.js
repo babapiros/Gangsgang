@@ -246,7 +246,8 @@ app.get("/secret", (req, res) => {
   if (
     !req.user ||
     !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) ||
-    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü)
+    client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.boosterRolü) || // Boost rolü olanlar engellenir
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü) // Secret role sahip değilse engellenir
   ) {
     return res.redirect(
       url.format({
@@ -271,7 +272,8 @@ app.get("/secret/:id", (req, res) => {
   if (
     !req.user ||
     !client.guilds.cache.get(IDler.sunucuID).members.cache.has(req.user.id) ||
-    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü)
+    client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.boosterRolü) || // Boost rolü olanlar engellenir
+    !client.guilds.cache.get(IDler.sunucuID).members.cache.get(req.user.id).roles.cache.has(IDler.secretRolü) // Secret role sahip değilse engellenir
   ) {
     return res.redirect(
       url.format({
