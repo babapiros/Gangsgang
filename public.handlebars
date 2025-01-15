@@ -1,0 +1,64 @@
+<style>
+#avatar2 {
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+    text-align:center;
+}
+    #avatar2:hover {
+        transform: translate(0px,-10px);
+        -webkit-transform: translate(0px,-10px);
+	}
+  </style>
+	<style>
+		body {
+			background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3be1dae-3caa-4d45-be6c-3de586ba95e2/dejrji3-f0dfbf31-958c-4701-9e10-fcea6d2ff693.jpg/v1/fill/w_1192,h_670,q_70,strp/purple_midnight_by_bisbiswas_dejrji3-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2IzYmUxZGFlLTNjYWEtNGQ0NS1iZTZjLTNkZTU4NmJhOTVlMlwvZGVqcmppMy1mMGRmYmYzMS05NThjLTQ3MDEtOWUxMC1mY2VhNmQyZmY2OTMuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.f4LKY-NudHhtj8GSn-R9XSyK5fshhE3LEeGeVYDAjpc) no-repeat fixed;
+			background-size: 100%;
+		}
+	</style>
+
+
+<title>LevyScript | Public</title>
+<br><br>
+  <h1 class="text-center text-light font-weight-bolder">
+    Altyapılar
+  </h1>
+  <h5 class="text-center text-light font-weight-light">
+    Daha Fazla Bilgi İçin <a style="text-decoration:none" href="/davet" target="_blank">Discord Sunucumuza</a> Katılın!
+  </h5>
+<hr>
+
+<div class="container">
+  <input id="search" type="text" class="form-control" placeholder="Kod Ara" aria-label="Kod Ara" aria-describedby="basic-addon2">
+</div><br>
+
+<div style="margin-left: 0.1rem; margin-right: 0.1rem;" class="row row-cols-1 row-cols-md-4">
+
+  {{#each kodlar}}
+  <div class="col mb-1">
+  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><center><img src="{{this.icon}}" alt="avatar" style="border-width: 1rem; border: solid;border-radius: 50%; max-width: 100%; height: 2.5rem;"></center> </br><b><center>{{this.k_adi}}</center></b></div>
+  <div class="card-body">
+    <p class="card-text avatar"><b>Altyapı İsmi:</b> {{this.isim}}</p>
+    <p class="card-text avatar"><b>Açıklama:</b> {{this.desc}}</p>
+    <p class="card-text"><b>Paylaşılma Tarihi:</b> {{this.date}}</p>
+    <p class="card-text"><b>Modüller:</b>{{#each this.modules}} <kbd>{{this}}</kbd> {{/each}}</p>
+      <a class="btn btn-outline-warning nav-link text-uppercase" href="/public/{{this.id}}"> <b>Altyapıyı İncele💎</b></a>
+
+  </div>
+    </div>
+</div>
+{{/each}}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#search").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    $(".card, .mb-3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<!-- KAR--> <script type="text/javascript" src="https://webkodu.ozgurlukicin.com/kod-kaynak/wk-kar-efekt.js"></script> <!-- KAR-->
