@@ -18,7 +18,7 @@
 
       <div class="twPc-button">
 
-        <a href="https://discordapp.com/users/{{member.user.id}}" class="btn btn-primary btn-sm">Discord Linki</a>  
+        <a href="https://discordapp.com/users/{{member.user.id}}" class="btn btn-primary btn-sm">Discord Link</a>  
 
       </div>
 
@@ -42,23 +42,23 @@
 
          {{#if perms.owner}}
 
-                        <span><img src="https://i.ibb.co/4tQbz1N/9111-shinyblueearlydev-1-removebg-preview.png" alt="Site Yetkilisi" width="30" height="30">Site Sahibi</span>
+                        <span><img src="https://i.ibb.co/4tQbz1N/9111-shinyblueearlydev-1-removebg-preview.png" alt="administrator" width="30" height="30">Owner</span>
 
                     {{else}}
 
                         {{#if perms.admin}}
 
-                            <span>Site Admini</span>
+                            <span>administrator</span>
 
                         {{else}}
 
                             {{#if perms.yetkili}}
 
-                                <span>Kod Paylaşım Yetkilisi</span>
+                                <span>Code Sharing Administrator</span>
 
                             {{else}}
 
-                                <span><img src="https://i.ibb.co/PzhvDnt/pet.gif" alt="Sunucu Üyesi" width="30" height="30">ÜYE</span>
+                                <span><img src="https://i.ibb.co/PzhvDnt/pet.gif" alt="Member" width="30" height="30">Member</span>
 
                             {{/if}}
 
@@ -78,23 +78,23 @@
 
             <div class="twPc-divStats">
 
-                <h3>Görebildiği Kodlar</h3>
+                <h3>The codes they can access:</h3>
 
                 <ul class="twPc-Arrange">
 
                     <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/script">Roblox Script</a></span></li>
 
-                    <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/topluluk">Topluluk</a></span></li>
+                    <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/topluluk">Public</a></span></li>
 
                     {{#if perms.yetkili}}
 
-                        <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Özel Kodlar</a></span></li>
+                        <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Exclusive codes</a></span></li>
 
                     {{else}}
 
                         {{#if perms.destekçi}}
 
-                            <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Özel Kodlar</a></span></li>
+                            <li class="twPc-ArrangeSizeFit"><span class="twPc-StatValue"><a class="btn btn-outline-warning" href="/">Exclusive codes</a></span></li>
 
                         {{else}}
 
