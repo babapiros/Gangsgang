@@ -1,0 +1,42 @@
+<h1>Admin Panel</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Member</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each members}}
+        <tr>
+            <td>{{this.username}}</td>
+            <td>
+                {{#each this.roles}}
+                <span>{{this.name}}</span>
+                {{/each}}
+            </td>
+            <td>
+                <form action="/add-role" method="POST">
+                    <input type="hidden" name="memberId" value="{{this.id}}" />
+                    <select name="roleId">
+                        {{#each ../roles}}
+                        <option value="{{this.id}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                    <button type="submit">Add Role</button>
+                </form>
+                <form action="/remove-role" method="POST">
+                    <input type="hidden" name="memberId" value="{{this.id}}" />
+                    <select name="roleId">
+                        {{#each this.roles}}
+                        <option value="{{this.id}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                    <button type="submit">Remove Role</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
