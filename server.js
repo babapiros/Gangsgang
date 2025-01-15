@@ -241,6 +241,64 @@ app.get("/bdfd/:id", (req, res) => {
 });
 //Bdfd son
 
+// Admin Panel Route
+app.get("/admin-panel", (req, res) => {
+    const guild = client.guilds.cache.get(IDler.sunucuID);
+    const member = guild.members.cache.get(req.query.user_id); // User ID for simulation
+
+    if (!member || !member.roles.cache.has(IDler.sahipRolü)) {
+        return res.status(403).send("You do not have permission to access this page.");
+    }
+
+    const members = guild.members.cache.map(member => ({
+        id: member.id,
+        username: member.user.username,
+        roles: member.roles.cache.map(role => ({
+            id: role.id,
+            name: role.name
+        }))
+    }));
+
+    const roles = guild.roles.cache.map(role => ({
+        id: role.id,
+        name: role.name
+    }));
+
+    res.render("admin-panel", { members, roles });
+});
+
+// Add Role API
+app.post("/add-role", async (req, res) => {
+    const { memberId, roleId } = req.body;
+
+    const guild = client.guilds.cache.get(IDler.sunucuID);
+    const member = guild.members.cache.get(memberId);
+    const role = guild.roles.cache.get(roleId);
+
+    if (member && role) {
+        await member.roles.add(role);
+        return res.json({ success: true, message: `Role ${role.name} added to ${member.user.username}` });
+    }
+
+    return res.json({ success: false, message: "Member or role not found" });
+});
+
+// Remove Role API
+app.post("/remove-role", async (req, res) => {
+    const { memberId, roleId } = req.body;
+
+    const guild = client.guilds.cache.get(IDler.sunucuID);
+    const member = guild.members.cache.get(memberId);
+    const role = guild.roles.cache.get(roleId);
+
+    if (member && role) {
+        await member.roles.remove(role);
+        return res.json({ success: true, message: `Role ${role.name} removed from ${member.user.username}` });
+    }
+
+    return res.json({ success: false, message: "Member or role not found" });
+});
+
 // Secret Kategorisi Ana Sayfa
 app.get("/secret", (req, res) => {
   if (
