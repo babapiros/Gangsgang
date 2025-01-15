@@ -414,7 +414,7 @@ app.get("/hazir/:id", (req, res) => {
 app.get("/public", (req, res) => {
   var data = db.topluluk.get("kodlar");
   data = sortData(data);
-  res.render("topluluk", {
+  res.render("public", {
     user: req.user,
     kodlar: data
   });
