@@ -1,69 +1,148 @@
-<style>
-  .copy-button {
-    display: inline-block;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LevyScript | {{kod.isim}}</title>
 
-  .copy-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  }
+  <!-- Siyah Arka Plan -->
+  <style>
+    body {
+      background: url('https://cdn.pixabay.com/photo/2017/08/30/22/27/background-2699975_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-  .copy-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-</style>
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-<title>LevyScript | {{kod.isim}}</title>
-<main>
-  <br><br><br>
+    .container {
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
 
-  <div id="sunucusresmi">
-    <hr>
-    <b>
+    .avatar {
+      border-radius: 5% !important;
+      border: 2px solid white;
+      padding: 1px;
+    }
+
+    h3, h5 {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .btn-outline-danger {
+      background: transparent;
+      border: 2px solid red;
+      color: red;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 25px;
+      transition: all 0.3s;
+    }
+
+    .btn-outline-danger:hover {
+      background: red;
+      color: white;
+    }
+  </style>
+
+  <!-- Kod Blokları için Prism.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lua.min.js"></script>
+  <style>
+    pre[class*="language-"] {
+      padding: 20px;
+      border-radius: 10px;
+      background: #1e1e1e;
+      font-size: 14px;
+      overflow: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .copy-button {
+      display: inline-block;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin: 10px 0;
+    }
+
+    .copy-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .copy-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div id="sunucusresmi">
+        <center>
+          <img alt="Avatar" src="{{kod.icon}}" class="avatar">
+          <h3>{{kod.k_adi}}</h3>
+        </center>
+      </div>
+
+      <h3>Kod İsmi: {{kod.isim}}</h3>
+      <h3>Kodu: {{kod.auth}}</h3>
+      <h5>Code Desc: {{kod.desc}}</h5>
+      <h5>Modules: <kbd>{{kod.modules}}</kbd></h5>
+
+      <h4>Code (1)</h4>
+      <pre class="language-lua">
+        <code>{{kod.main_code}}</code>
+      </pre>
+      <button type="button" class="copy-button" id="copy_main">Kodu Kopyala</button>
+
+      <h4>Code (2)</h4>
+      <pre class="language-lua">
+        <code>{{kod.komutlar_code}}</code>
+      </pre>
+      <button type="button" class="copy-button" id="copy_komutlar">Kodu Kopyala</button>
+
       <center>
-        <img alt="Avatar" src="{{kod.icon}}" class="avatar">
-        <h3 class="text-center text-light font-weight-bolder" style="margin: 1rem;">{{kod.k_adi}}</h3>
+        <a href="/sil/{{kod.kod_rank}}/{{kod.id}}" class="btn btn-outline-danger">Delete Code</a>
       </center>
-    </b>
-    <hr>
-  </div>
-  <center>
-    <br>
-    <h3 class="text-center text-light font-weight-bolder" style="margin: 1rem;">Kod İsmi: {{kod.isim}} {{member.user.id}} </h3>
-    <h3 class="text-center text-light font-weight-bolder" style="margin: 1rem;">Kodu: {{kod.auth}} {{member.user.id}} </h3>
+    </div>
+  </main>
 
-    <h5 class="text-center text-light font-weight-light">Code Desc: {{kod.desc}}</h5>
-    <hr>
+  <script>
+    // Kopyalama İşlemi
+    document.getElementById('copy_main').addEventListener('click', function () {
+      navigator.clipboard.writeText("{{kod.main_code}}");
+      alert('Kod 1 kopyalandı!');
+    });
 
-    <h7 class="text-center text-light font-weight-light">Modules: <kbd>{{kod.modules}}</kbd></h5>
-    <hr>
-  </center>
-  <center><p class="h5">Code(1)</p></center>
-  <pre class="kodyazirengi">
-    <code>{{kod.main_code}}</code>
-  </pre>
-  <button type="button" class="copy-button" id="copy_main">Kodu Kopyala</button>
-  <code id="code_main" hidden>{{kod.main_code}} </code>
-
-  <center><p class="h5">Code(2)</p></center>
-  <pre class="kodyazirengi">
-    <code>{{kod.komutlar_code}}</code>
-  </pre>
-  <button type="button" class="copy-button" id="copy_komutlar">Kodu Kopyala</button>
-  <code id="code_komutlar" hidden>{{kod.komutlar_code}}</code>
-
-  <center><a href="/sil/{{kod.kod_rank}}/{{kod.id}}" class="btn btn-outline-danger btn-lg btn-block" style="margin: 1rem;">Delete Code</a></center>
-</main>
-<script type="text/javascript" src="https://webkodu.ozgurlukicin.com/kod-kaynak/wk-kar-efekt.js"></script>
+    document.getElementById('copy_komutlar').addEventListener('click', function () {
+      navigator.clipboard.writeText("{{kod.komutlar_code}}");
+      alert('Kod 2 kopyalandı!');
+    });
+  </script>
+</body>
+</html>
