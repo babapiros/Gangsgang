@@ -132,6 +132,36 @@ app.get("/", (req, res) => {
   });
 });
 
+const likesFile = "./likes.json";
+
+// Beğeni JSON dosyasını kontrol et, yoksa oluştur.
+if (!fs.existsSync(likesFile)) {
+  fs.writeFileSync(likesFile, JSON.stringify({}));
+}
+
+// Beğeni sayısını al
+app.get("/api/likes/:id", (req, res) => {
+  const { id } = req.params;
+  const likesData = JSON.parse(fs.readFileSync(likesFile, "utf-8"));
+  const likeCount = likesData[id] || 0;
+  res.json({ id, likes: likeCount });
+});
+
+// Beğeni ekle
+app.post("/api/likes/:id", (req, res) => {
+  const { id } = req.params;
+  const likesData = JSON.parse(fs.readFileSync(likesFile, "utf-8"));
+
+  if (!likesData[id]) {
+    likesData[id] = 0; // Eğer beğeni yoksa sıfırdan başlat
+  }
+
+  likesData[id] += 1; // Beğeni artır
+  fs.writeFileSync(likesFile, JSON.stringify(likesData, null, 2));
+
+  res.json({ id, likes: likesData[id] });
+});
+
 app.get("/script", (req, res) => {
   var data = db.script.get("kodlar");
   data = sortData(data);
