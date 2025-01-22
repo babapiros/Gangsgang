@@ -132,35 +132,58 @@ app.get("/", (req, res) => {
   });
 });
 
-const likesFile = "./likes.json";
+const likesFilePath = "./likes.json";
 
-// Beğeni JSON dosyasını kontrol et, yoksa oluştur.
-if (!fs.existsSync(likesFile)) {
-  fs.writeFileSync(likesFile, JSON.stringify({}));
+// likes.json'u kontrol et, yoksa oluştur
+if (!fs.existsSync(likesFilePath)) {
+  fs.writeFileSync(likesFilePath, JSON.stringify({}));
 }
 
-// Beğeni sayısını al
-app.get("/api/likes/:id", (req, res) => {
-  const { id } = req.params;
-  const likesData = JSON.parse(fs.readFileSync(likesFile, "utf-8"));
-  const likeCount = likesData[id] || 0;
-  res.json({ id, likes: likeCount });
-});
+// likes.json'u oku ve yaz
+function getLikesData() {
+  return JSON.parse(fs.readFileSync(likesFilePath, "utf8"));
+}
 
-// Beğeni ekle
-app.post("/api/likes/:id", (req, res) => {
-  const { id } = req.params;
-  const likesData = JSON.parse(fs.readFileSync(likesFile, "utf-8"));
+function saveLikesData(data) {
+  fs.writeFileSync(likesFilePath, JSON.stringify(data, null, 2));
+}
 
-  if (!likesData[id]) {
-    likesData[id] = 0; // Eğer beğeni yoksa sıfırdan başlat
+// Like rotası
+app.post("/like/:id", (req, res) => {
+  const id = req.params.id;
+
+  if (!id) {
+    return res.status(400).json({ success: false, message: "ID gerekli." });
   }
 
-  likesData[id] += 1; // Beğeni artır
-  fs.writeFileSync(likesFile, JSON.stringify(likesData, null, 2));
+  const likesData = getLikesData();
 
-  res.json({ id, likes: likesData[id] });
+  // ID için beğeni sayısını artır
+  if (!likesData[id]) {
+    likesData[id] = 1; // İlk beğeni
+  } else {
+    likesData[id] += 1; // Beğeniyi artır
+  }
+
+  saveLikesData(likesData);
+
+  res.json({ success: true, likes: likesData[id] });
 });
+
+// Like sayısını getirme
+app.get("/likes/:id", (req, res) => {
+  const id = req.params.id;
+
+  if (!id) {
+    return res.status(400).json({ success: false, message: "ID gerekli." });
+  }
+
+  const likesData = getLikesData();
+  const likes = likesData[id] || 0;
+
+  res.json({ success: true, likes });
+});
+
 
 app.get("/script", (req, res) => {
   var data = db.script.get("kodlar");
