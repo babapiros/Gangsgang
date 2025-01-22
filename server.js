@@ -154,7 +154,7 @@ app.get("/script/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site. "
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a> "
         }
       })
     );
@@ -198,7 +198,7 @@ app.get("/bdfd/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -400,7 +400,7 @@ app.get("/secret", (req, res) => {
         pathname: "/hata",
         query: {
           statuscode: 137,
-          message: "To view this category, you must first join our Discord server and log in to the site."
+          message: "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -455,7 +455,7 @@ app.get("/secret/:id", (req, res) => {
         pathname: "/hata",
         query: {
           statuscode: 137,
-          message: "To view this category, you must first join our Discord server and log in to the site."
+          message: "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -526,7 +526,7 @@ app.get("/public/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "To view this category, you must first join our Discord server and log in to the site."
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -585,7 +585,7 @@ app.get("/altin/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -643,7 +643,7 @@ app.get("/elmas/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -701,7 +701,7 @@ app.get("/hazir/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -760,7 +760,7 @@ app.get("/topluluk/:id", (req, res) => {
         query: {
           statuscode: 137,
           message:
-            "Unfortunately, to view this category, you first need to join our Discord server / log in to the site."
+            "Unfortunately, to view this category, you first need to <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -788,7 +788,7 @@ app.get("/profil/:id", (req, res) => {
         pathname: "/hata",
         query: {
           statuscode: 501,
-          message: "No such person was found."
+          message: "User Not Found."
         }
       })
     );
@@ -962,7 +962,7 @@ app.get("/paylas", (req, res) => {
         query: {
           statuscode: 138,
           message:
-            "To share a code, you must first join our Discord server and log in to the site."
+            "To share a code, you must first <a style="text-decoration:none" href="/davet" target="_blank">join our Discord server</a> and <a style="text-decoration:none" href="/davet" target="_blank">log in to the site.</a>"
         }
       })
     );
@@ -1026,9 +1026,9 @@ app.post("/paylasim", (req, res) => {
     .setColor("RANDOM")
     .setFooter(client.guilds.cache.get(IDler.sunucuID).name, client.guilds.cache.get(IDler.sunucuID).iconURL({ dynamic: true, size: 2048}))
     .setTimestamp()
-    .setAuthor("Sitede Bir  Kod Paylaşıldı!",client.user.avatarURL)
-    .addField("Kod Bilgileri",`**Adı:** ${obj.isim} \n**Açıklaması:** ${obj.desc} \n**Paylaşan:** <@${req.user.id}>`)
-    .addField("Kod Sayfası", `[Tıkla!](https://gangsgang.glitch.me/${obj.kod_rank}/${obj.id})`));
+    .setAuthor("A code has been shared on the site!",client.user.avatarURL)
+    .addField("Code Information",`**Code Name:** ${obj.isim} \n**Code Description:** ${obj.desc} \n**Sharing:** <@${req.user.id}>`)
+    .addField("Code Page", `[Click!](https://levyscript.onrender.com/${obj.kod_rank}/${obj.id})`));
   res.redirect(`/${obj.kod_rank}/${obj.id}`);
   
   
@@ -1073,7 +1073,7 @@ app.use((req, res) => {
       pathname: "/hata",
       query: {
         statuscode: 404,
-        message: "Sayfa Bulunamadı"
+        message: "Not Found"
       }
     })
   );
@@ -1083,6 +1083,6 @@ client.login(IDler.botToken);
 
 client.on("ready", () => {
   const listener = app.listen(process.env.PORT, function() {
-    console.log("Proje Hazır!");
+    console.log("Server Started!");
   });
 });
