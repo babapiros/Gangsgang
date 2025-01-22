@@ -6,97 +6,91 @@
   <title>LevyScript | {{kod.isim}}</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Genel Temalar */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #121212;
+      font-family: Arial, sans-serif;
+      background: url(https://cdn.pixabay.com/photo/2016/07/16/03/30/space-1529940_1280.jpg) no-repeat center center fixed;
+      background-size: cover;
       color: #f5f5f5;
-      line-height: 1.6;
     }
 
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 2rem auto;
       padding: 1.5rem;
-      background: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      background: #1c1c1c;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
-    h3, h5 {
-      margin: 1rem 0;
-      text-align: center;
-    }
-
-    hr {
-      border: 0.5px solid #333;
-    }
-
-    /* Kod Blokları */
-    .code-block {
-      background: #282c34;
-      padding: 1rem;
+    .kodyazirengi {
+      background: #2b2b2b;
       border-radius: 8px;
-      margin: 1.5rem 0;
+      padding: 1rem;
+      margin: 1rem 0;
       position: relative;
-      overflow: hidden;
     }
 
-    .code-block code {
+    .kodyazirengi code {
       display: block;
       color: #dcdcdc;
       font-family: 'Courier New', Courier, monospace;
       white-space: pre-wrap;
-      line-height: 1.5;
+      overflow-x: auto;
     }
 
-    .code-block pre {
-      margin: 0;
-    }
-
-    /* Kopyala Butonları */
-    .copy-button {
+    .like-container {
       position: absolute;
       top: 10px;
       right: 10px;
-      background: #444;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
       display: flex;
       align-items: center;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
-    .copy-button:hover {
-      background: #555;
-    }
-
-    .copy-button i {
-      margin-right: 5px;
-    }
-
-    /* Buton */
-    .btn-delete {
-      display: inline-block;
-      background: #e53935;
+    .like-icon {
       color: white;
-      text-decoration: none;
-      padding: 10px 20px;
+      font-size: 18px;
+      margin-right: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .like-icon.liked {
+      color: red;
+    }
+
+    .like-count {
+      color: white;
+      font-size: 16px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title h5 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .section-title .copy-icon {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 0.5rem;
       border-radius: 5px;
+      cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .btn-delete:hover {
-      background: #c62828;
+    .section-title .copy-icon:hover {
+      background: #666;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       main {
         margin: 1rem;
@@ -107,45 +101,84 @@
 </head>
 <body>
   <main>
-    <!-- Kod Bilgileri -->
-    <h3>Kod İsmi: {{kod.isim}}</h3>
-    <h5>Kod ID: {{member.user.id}}</h5>
-    <h5>Kod Açıklaması: {{kod.desc}}</h5>
-    <hr>
+    <div>
+      <h3 class="text-center">Kod İsmi: {{kod.isim}}</h3>
+      <h5 class="text-center">Kod ID: {{member.user.id}}</h5>
+      <h5 class="text-center">Kod Açıklaması: {{kod.desc}}</h5>
+      <hr>
 
-    <!-- Kod Blokları -->
-    <!-- Kod 1 -->
-    <div class="code-block">
-      <button class="copy-button" onclick="copyCode('code_main')">
-        <i class="fas fa-copy"></i> Kopyala
-      </button>
-      <pre><code id="code_main">{{kod.main_code}}</code></pre>
+      <!-- Kod 1 -->
+      <div>
+        <div class="section-title">
+          <h5>Code(1)</h5>
+          <button class="copy-icon" onclick="copyCode('code_main')"><i class="fas fa-copy"></i></button>
+        </div>
+        <pre class="kodyazirengi">
+          <code id="code_main">{{kod.main_code}}</code>
+          <div class="like-container" onclick="likeCode('{{kod.id}}')">
+            <i class="fas fa-heart like-icon" id="like-icon-{{kod.id}}"></i>
+            <span class="like-count" id="like-count-{{kod.id}}">0</span>
+          </div>
+        </pre>
+      </div>
+
+      <!-- Kod 2 -->
+      <div>
+        <div class="section-title">
+          <h5>Code(2)</h5>
+          <button class="copy-icon" onclick="copyCode('code_komutlar')"><i class="fas fa-copy"></i></button>
+        </div>
+        <pre class="kodyazirengi">
+          <code id="code_komutlar">{{kod.komutlar_code}}</code>
+          <div class="like-container" onclick="likeCode('{{kod.id}}-komutlar')">
+            <i class="fas fa-heart like-icon" id="like-icon-{{kod.id}}-komutlar"></i>
+            <span class="like-count" id="like-count-{{kod.id}}-komutlar">0</span>
+          </div>
+        </pre>
+      </div>
     </div>
-
-    <!-- Kod 2 -->
-    <div class="code-block">
-      <button class="copy-button" onclick="copyCode('code_komutlar')">
-        <i class="fas fa-copy"></i> Kopyala
-      </button>
-      <pre><code id="code_komutlar">{{kod.komutlar_code}}</code></pre>
-    </div>
-
-    <!-- Silme Butonu -->
-    <center>
-      <a href="/sil/{{kod.kod_rank}}/{{kod.id}}" class="btn-delete">Delete Code</a>
-    </center>
   </main>
 
   <script>
-    /* Kopyala Fonksiyonu */
-    function copyCode(id) {
+    async function copyCode(id) {
       const codeContent = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(codeContent).then(() => {
-        alert("Kod başarıyla kopyalandı!");
-      }).catch(err => {
-        console.error("Kod kopyalama başarısız: ", err);
-      });
+      try {
+        await navigator.clipboard.writeText(codeContent);
+        alert("Code copied to clipboard!");
+      } catch (err) {
+        console.error("Failed to copy code: ", err);
+      }
     }
+
+    async function likeCode(id) {
+      const likeIcon = document.getElementById(`like-icon-${id}`);
+      const likeCountElem = document.getElementById(`like-count-${id}`);
+
+      try {
+        const response = await fetch(`/api/likes/${id}`, { method: "POST" });
+        const data = await response.json();
+
+        likeCountElem.textContent = data.likes;
+        likeIcon.classList.add("liked");
+      } catch (error) {
+        console.error("Error liking the code:", error);
+      }
+    }
+
+    async function fetchLikes(id) {
+      try {
+        const response = await fetch(`/api/likes/${id}`);
+        const data = await response.json();
+        document.getElementById(`like-count-${id}`).textContent = data.likes;
+      } catch (error) {
+        console.error("Error fetching likes:", error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetchLikes("{{kod.id}}");
+      fetchLikes("{{kod.id}}-komutlar");
+    });
   </script>
 </body>
 </html>
