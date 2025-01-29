@@ -6,49 +6,80 @@
 		}
 	</style>
 
+<style>
+    .file-upload {
+        border: 2px dashed #6c757d;
+        padding: 2rem;
+        text-align: center;
+        cursor: pointer;
+        margin: 1rem 0;
+    }
+    .file-upload:hover {
+        background-color: #2b3035;
+    }
+    #preview {
+        max-width: 200px;
+        margin: 1rem auto;
+        display: none;
+    }
+</style>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <title>LevyScript | Share Code</title>
 <main>
   <div class="container">
-    <h1 class="text-center">
-      LevyScript Share Code
-    </h1>
-    <p class ="text-center">
-      If something is shared with the intention of trolling or anything other than code, you will receive the "Blacklist" role on the server.
-    </p>
+    <h1 class="text-center">LevyScript Share Code</h1>
+    <p class="text-center">If something is shared with the intention of trolling or anything other than code, you will receive the "Blacklist" role on the server.</p>
     <hr>
-    <div class="bg-dark">
-      <form action="paylasim" method="POST">
-    <div class="input-group">
-      <input type="text" class="form-control" name="kod_adi" maxlength="2000" placeholder="Code Name" required>
-      <div class="input-group-append">
-        <select class="custom-select text-white bg-dark" name="kod_rank" id="rank_choice" required>
-          <option value="script">Roblox Script</option>
-          
-          
+    <div class="bg-dark p-4 rounded">
+      <form action="paylasim" method="POST" enctype="multipart/form-data">
+        <!-- Yeni Eklenen Oyun Bilgileri -->
+        <input type="text" class="form-control mb-3" name="game_name" placeholder="Game Name" required>
+        <input type="text" class="form-control mb-3" name="game_id" placeholder="Game ID" required>
+        <input type="url" class="form-control mb-3" name="game_url" placeholder="Game URL" required>
 
-          
-          <option value="topluluk">Public</option>
-        </select>
-      </div>
-    </div><br>
-      <input type="text" class="form-control" name="desc" maxlength="300"  placeholder="Code Desc" required><br>
-      <input type="text" class="form-control" name="modules" placeholder="Modules" required><br>
-      <input type="text" class="form-control" name="author" placeholder="Code Owner(s)" required><br>
-      <p class="h3">
-        Code,Code description, Continuation, Variable... 
-      </p>
-      <textarea class="form-control" name="main_code" id="main_code" rows="20" placeholder="Code" required></textarea>
-      <p class="h3">
-        Code,Code description, Continuation, Variable... 
-      </p>
-      <textarea class="form-control" name="komutlar_code" id="komutlar_code" rows="20" placeholder="Code" required></textarea><br>
-      <input type="text" class="form-control" name="k_adi" value="{{user.username}}" required READONLY hidden><br>
-      <button type="submit" class="btn btn-outline-primary btn-lg">Sumbit</button>
-    </form>
+        <!-- Mevcut Alanlar -->
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="kod_adi" maxlength="2000" placeholder="Code Name" required>
+          <div class="input-group-append">
+            <select class="custom-select text-white bg-dark" name="kod_rank" required>
+              <option value="script">Roblox Script</option>
+              <option value="topluluk">Public</option>
+            </select>
+          </div>
+        </div>
+        <input type="text" class="form-control mb-3" name="desc" maxlength="300" placeholder="Code Desc" required>
+        <input type="text" class="form-control mb-3" name="modules" placeholder="Modules" required>
+        <input type="text" class="form-control mb-3" name="author" placeholder="Code Owner(s)" required>
+
+        <!-- Dosya Yükleme Alanı -->
+        <div class="file-upload" onclick="document.getElementById('fileInput').click()">
+          <i class="fas fa-file-upload fa-3x mb-2"></i>
+          <p>Upload Image/File</p>
+          <input type="file" id="fileInput" name="file" hidden accept="image/*" onchange="previewImage(event)">
+        </div>
+        <img id="preview" src="#" alt="Preview" class="img-fluid rounded">
+
+        <!-- Kod Blokları -->
+        <textarea class="form-control mb-3" name="main_code" rows="10" placeholder="Code (1)" required></textarea>
+        <textarea class="form-control mb-3" name="komutlar_code" rows="10" placeholder="Code (2)" required></textarea>
+
+        <input type="text" class="form-control" name="k_adi" value="{{user.username}}" hidden>
+        <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Submit</button>
+      </form>
     </div>
   </div>
 </main>
-<!-- KAR--> <script type="text/javascript" src="https://webkodu.ozgurlukicin.com/kod-kaynak/wk-kar-efekt.js"></script> <!-- KAR-->
+
+<script>
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const preview = document.getElementById('preview');
+            preview.src = reader.result;
+            preview.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
